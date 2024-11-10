@@ -1,7 +1,4 @@
-// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @media (min-width: 1536px) {
   .container {
@@ -82,7 +79,7 @@ $color-background: #e7e7e7;
 
 $mirage-color-500: #1c2637;
 
-$green-mirage-500: #01b474;
+$green-mirage-500: #0d8342;
 
 $strawberry-500: #e31c5f;
 
@@ -95,6 +92,7 @@ $theme-blue: #006ce4;
 
 
 $kui-shadow-100: 0px 2px 8px 0px rgba(26, 26, 26, .16);
-$kui-theme: #0e1c36;
+$kui-theme: #000;
 
-$kui-disabled: #f2f3f6;
+$kui-disabled: #f3f3f3;
+$kui-disabled-500: #5e5e5e;
