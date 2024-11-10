@@ -1,0 +1,21 @@
+#app-header {
+  .container {
+    .app-header__content {
+      .app-header__logo {
+        svg {
+          width: 140px;
+          height: auto;
+
+          @include for-tablet-portrait-up {
+            width: 155px;
+            height: auto;
+          }
+
+          path {
+            fill: #212121;
+          }
+        }
+      }
+    }
+  }
+}

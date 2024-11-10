@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<id><![CDATA[38]]></id>
+		<title><![CDATA[WR/0A/9/M135]]></title>
+		<content><![CDATA[]]></content>
+		<metraz><![CDATA[71.40]]></metraz>
+		<_metraz><![CDATA[field_66bcbb9ce50af]]></_metraz>
+		<pokoje><![CDATA[4]]></pokoje>
+		<_pokoje><![CDATA[field_66bcbbbbe50b0]]></_pokoje>
+		<pietro><![CDATA[2]]></pietro>
+		<_pietro><![CDATA[field_66bcbbca59593]]></_pietro>
+		<numer_budynku><![CDATA[1C]]></numer_budynku>
+		<_numer_budynku><![CDATA[field_66bcbc2a59594]]></_numer_budynku>
+		<status><![CDATA[Wolne]]></status>
+		<_status><![CDATA[field_66bcbc3759595]]></_status>
+		<inwestycja><![CDATA[Wisła Residence]]></inwestycja>
+		<_inwestycja><![CDATA[field_66bcbc3d59596]]></_inwestycja>
+		<powierzchnie_dodatkowe><![CDATA[a:1:{i:0;s:6:"Balkon";}]]></powierzchnie_dodatkowe>
+		<_powierzchnie_dodatkowe><![CDATA[field_66bcbc4959597]]></_powierzchnie_dodatkowe>
+		<numer_lokalu><![CDATA[M135]]></numer_lokalu>
+		<_numer_lokalu><![CDATA[field_66bcbc5159598]]></_numer_lokalu>
+		<thumbnail_grid><![CDATA[http://localhost/restate/wp-content/uploads/investments/pv-2024/previews/preview_PV:3B:2:M12.webp]]></thumbnail_grid>
+		<_thumbnail_grid><![CDATA[field_66bccf3150bf2]]></_thumbnail_grid>
+		<rzut_mieszkania><![CDATA[]]></rzut_mieszkania>
+		<_rzut_mieszkania><![CDATA[field_66bccf738fa3f]]></_rzut_mieszkania>
+		<lokalizacja_inwestycji><![CDATA[Warszawa]]></lokalizacja_inwestycji>
+		<_lokalizacja_inwestycji><![CDATA[field_66bcd32ad85f0]]></_lokalizacja_inwestycji>
+		<udogodnienia><![CDATA[]]></udogodnienia>
+		<_udogodnienia><![CDATA[]]></_udogodnienia>
+		<undefined27><![CDATA[]]></undefined27>
+		<undefined28><![CDATA[]]></undefined28>
+		<undefined29><![CDATA[]]></undefined29>
+		<undefined30><![CDATA[]]></undefined30>
+		<undefined31><![CDATA[]]></undefined31>
+		<undefined32><![CDATA[]]></undefined32>
+		<undefined33><![CDATA[]]></undefined33>
+	</node>
+</data>

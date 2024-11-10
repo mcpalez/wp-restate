@@ -1,0 +1,44 @@
+#app-footer {
+  padding-block: 35px;
+  background: $mirage-color-500;
+
+  .container {
+    .app-footer__top {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      h5 {
+        font-size: 14px;
+        font-weight: 700;
+        color: $pure-white;
+      }
+
+      p {
+        color: $pure-white;
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+    }
+
+    .app-footer__center {
+      margin-top: 26px;
+
+      p {
+        font-size: 12px;
+        color: $pure-white;
+        opacity: 0.8;
+      }
+    }
+
+    .app-footer__bottom {
+      margin-top: 26px;
+
+      p {
+        font-size: 10px;
+        color: $pure-white;
+        opacity: 0.8;
+      }
+    }
+  }
+}

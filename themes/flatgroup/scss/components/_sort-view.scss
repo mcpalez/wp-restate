@@ -1,0 +1,119 @@
+#sortDrawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 20;
+
+  .sortDrawer__box {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    pointer-events: auto;
+
+    #sortDrawer__backdrop {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      display: none;
+    }
+
+    #sortDrawer__content {
+      box-sizing: border-box;
+      display: none;
+      max-width: none;
+      max-height: none;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      background: white;
+      position: fixed;
+      height: 100%;
+      inset: 0;
+      z-index: 20;
+      top: 340px;
+      border-radius: 17px 17px 0 0;
+
+      @keyframes slide-up {
+        0% {
+          transform: translateY(100%);
+        }
+
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
+      @keyframes slide-down {
+        0% {
+          transform: translateY(0%);
+        }
+
+        100% {
+          transform: translateY(100%);
+        }
+      }
+
+      &.opened {
+        animation-name: slide-up;
+        animation-duration: 450ms;
+        animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        animation-fill-mode: both;
+        animation-iteration-count: 1;
+      }
+
+      &.closing {
+        animation-name: slide-down;
+        animation-duration: 450ms;
+        animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        animation-fill-mode: both;
+        animation-iteration-count: 1;
+      }
+
+      .sortDrawer__nav {
+        display: flex;
+        align-items: center;
+        padding-block: 15px 15px;
+        position: sticky;
+        background: white;
+        z-index: 100;
+        top: 0;
+        border-bottom: 1px solid #eee;
+
+        #sortDrawer__close {
+          margin-right: auto;
+          margin-left: 20px;
+
+          svg {
+            width: 18px;
+            height: auto;
+          }
+        }
+
+        p {
+          position: absolute;
+          left: 49%;
+          transform: translateX(-50%);
+          font-weight: 600;
+          font-size: 16px;
+          margin: 0;
+          text-align: center;
+          color: $black-color-500;
+        }
+      }
+
+      .sortDrawer__footer {
+        position: sticky;
+        display: flex;
+        overflow-y: hidden;
+        align-items: center;
+        background: white;
+        bottom: 20px;
+        height: 64px;
+        width: 100%;
+      }
+    }
+  }
+}

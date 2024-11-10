@@ -1,0 +1,100 @@
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1280px !important;
+  }
+}
+
+body {
+  overflow-x: hidden;
+
+  &.filters-opened {
+    overflow-y: hidden;
+  }
+
+  &.sort-opened {
+    overflow-y: hidden;
+  }
+}
+
+$color-primary: rgb(4, 19, 43);
+$color-primary-100: rgba(4, 19, 43, 0.613);
+
+$primary-color-50: #f5f5f5;
+$primary-color-100: #e0e0e0;
+$primary-color-200: #bdbdbd;
+$primary-color-300: #9e9e9e;
+$primary-color-400: #616161;
+$primary-color-500: #212121;
+$primary-color-600: #1c1c1c;
+$primary-color-700: #161616;
+$primary-color-800: #111111;
+$primary-color-900: #0b0b0b;
+$primary-color-950: #050505;
+
+$black-color-50: #F5F5F5;
+$black-color-100: #E8E8E8;
+$black-color-200: #C7C7C7;
+$black-color-300: #A6A6A6;
+$black-color-400: #636363;
+$black-color-500: #212121;
+$black-color-600: #1F1C1C;
+$black-color-700: #1A1313;
+$black-color-800: #140C0C;
+$black-color-900: #0F0707;
+$black-color-950: #0A0303;
+
+$burning-orange-50: #FFFBF5;
+$burning-orange-100: #FCF5E8;
+$burning-orange-200: #FAE4C8;
+$burning-orange-300: #F7D0A6;
+$burning-orange-400: #F2A268;
+$burning-orange-500: #ec662a;
+$burning-orange-600: #D65822;
+$burning-orange-700: #B34317;
+$burning-orange-800: #8F2F10;
+$burning-orange-900: #6B2009;
+$burning-orange-950: #451103;
+
+$waterloo-50: #f5f5f6;
+$waterloo-100: #e2e3e5;
+$waterloo-200: #c5c7ca;
+$waterloo-300: #a6a9af;
+$waterloo-400: #8f9299;
+$waterloo-500: #818494;
+$waterloo-600: #757884;
+$waterloo-700: #656871;
+$waterloo-800: #51545a;
+$waterloo-900: #3b3d42;
+$waterloo-950: #2a2b2f;
+
+$denim-color-500: #1769E2;
+$selago-color-500: #EDF5FD;
+$cerulean-color-500: #265DB3;
+$hawkes-color-500: #dde8fd;
+$color-disabled: #DDDDDD;
+$color-selected: #F7F7F7;
+$color-background: #e7e7e7;
+
+$mirage-color-500: #1c2637;
+
+$green-mirage-500: #01b474;
+
+$strawberry-500: #e31c5f;
+
+$pure-white: #FFF;
+
+$athens-gray: #f2f3f6;
+
+$theme-blue: #006ce4;
+
+
+
+$kui-shadow-100: 0px 2px 8px 0px rgba(26, 26, 26, .16);
+$kui-theme: #0e1c36;
+
+$kui-disabled: #f2f3f6;
