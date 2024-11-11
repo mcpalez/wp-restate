@@ -75,7 +75,7 @@
         display: flex;
         align-items: center;
         padding-block: 15px 15px;
-        border-bottom: 1px solid $kui-disabled;
+        border-bottom: 1px solid $kui-disabled-border;
         position: sticky;
         background: white;
         z-index: 100;
@@ -98,7 +98,7 @@
 
         p {
           position: absolute;
-          left: 16%;
+          left: 15%;
           margin: 0 0 2px 0;
           color: $black-color-500;
           font-size: 19px;
@@ -113,12 +113,10 @@
         #advancedFilters__clear-btn {
           margin-left: auto;
           margin-right: 20px;
-          font-size: 13px;
-          text-transform: uppercase;
-          font-weight: 500;
+          font-size: 17px;
+          font-weight: 470;
           color: $black-color-500;
           line-height: 1;
-          margin-block: 2px 0;
         }
       }
 
@@ -138,10 +136,10 @@
 
               .advancedFilters__parameters__heading {
                 font-weight: 400;
-                font-size: 14px;
+                font-size: 15px;
                 color: $black-color-500;
                 display: flex;
-                padding: 24px 0 5px;
+                padding: 24px 0 7px;
                 align-items: center;
                 line-height: 1.32;
                 justify-content: space-between;
@@ -213,8 +211,8 @@
                 }
 
                 .features-button {
-                  border-radius: 50px;
-                  padding: 0 17px;
+                  font-size: 16px;
+                  padding: 11px 14px;
                   width: auto;
                 }
 
@@ -284,7 +282,7 @@
                   padding: 10px 15px;
                   font-size: 17px;
                   border-radius: 4px;
-                  color: $black-color-500;
+                  color: $kui-disabled-500;
                   height: 48px;
                   border: none;
                   cursor: pointer;
@@ -329,6 +327,7 @@
                     display: flex;
                     font-size: 16px;
                     align-items: center;
+                    line-height: 1.2;
                     cursor: pointer;
 
                     input[type="checkbox"] {
@@ -536,7 +535,7 @@
         bottom: 40px;
         height: 72px;
         width: 100%;
-        border-top: 1px solid $color-disabled;
+        border-top: 1px solid $kui-disabled-border;
 
         .advancedFilters__buttons__container {
           display: flex;

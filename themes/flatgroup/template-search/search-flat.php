@@ -116,7 +116,7 @@ $flat_sizes = [
           </svg>
         </button>
         <p>Filtry</p>
-        <button class="advancedFilters__clear" id="advancedFilters__clear-btn">Wyczyść filtry</button>
+        <button class="advancedFilters__clear" id="advancedFilters__clear-btn">Wyczyść</button>
       </div>
       <div class="container mx-auto px-5">
         <div class="advancedFilters__parameters">
@@ -161,19 +161,6 @@ $flat_sizes = [
                 <input type="hidden" id="status" name="status" value="<?php echo $default_status; ?>">
               </div>
             </div>
-            <div class="advancedFilters__parameters__container hidden">
-              <div class="advancedFilters__parameters__heading">Informacje dodatkowe</div>
-              <div class="advancedFilters__parameters__buttons">
-                <button type="button" class="features-button" data-value="ogród">Ogród</button>
-                <button type="button" class="features-button" data-value="komórka+lokatorska">Komórka lokatorska</button>
-                <button type="button" class="features-button" data-value="dwie+kondygnacje">Dwie kondygnacje</button>
-                <button type="button" class="features-button" data-value="balkon">Balkon</button>
-                <button type="button" class="features-button" data-value="winda">Winda</button>
-                <button type="button" class="features-button" data-value="taras">Taras</button>
-                <button type="button" class="features-button" data-value="taras">Garaż</button>
-                <input type="hidden" id="features" name="features" value="<?php echo $default_features; ?>">
-              </div>
-            </div>
             <div class="advancedFilters__parameters__container">
               <div class="advancedFilters__parameters__heading">Dostępne inwestycje</div>
               <div class="advancedFilters__parameters__buttons">
@@ -182,6 +169,18 @@ $flat_sizes = [
                 <button type="button" class="investment-button" data-value="praga+vita">Praga Vita</button>
                 <button type="button" class="investment-button" data-value="ostoja+ursus">Ostoja Ursus</button>
                 <input type="hidden" id="investment" name="investment" value="<?php echo $default_investment; ?>">
+              </div>
+            </div>
+            <hr class="mt-5">
+            <div class="advancedFilters__parameters__container">
+              <div class="advancedFilters__parameters__heading">Informacje dodatkowe</div>
+              <div class="advancedFilters__parameters__buttons">
+                <button type="button" class="features-button" data-value="ogród">Ogród</button>
+                <button type="button" class="features-button" data-value="komórka+lokatorska">Komórka lokatorska</button>
+                <button type="button" class="features-button" data-value="balkon">Balkon</button>
+                <button type="button" class="features-button" data-value="winda">Winda</button>
+                <button type="button" class="features-button" data-value="taras">Garaż</button>
+                <input type="hidden" id="features" name="features" value="<?php echo $default_features; ?>">
               </div>
             </div>
             <div class="advancedFilters__parameters__container hidden">
