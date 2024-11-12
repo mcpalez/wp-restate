@@ -139,7 +139,7 @@
                 font-size: 15px;
                 color: $black-color-500;
                 display: flex;
-                padding: 24px 0 7px;
+                padding: 27px 0 7px;
                 align-items: center;
                 line-height: 1.32;
                 justify-content: space-between;
@@ -532,7 +532,7 @@
         overflow-y: hidden;
         align-items: center;
         background: white;
-        bottom: 40px;
+        bottom: 0;
         height: 72px;
         width: 100%;
         border-top: 1px solid $kui-disabled-border;

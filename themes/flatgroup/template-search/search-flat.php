@@ -617,12 +617,15 @@ $flat_sizes = [
       $('.floor-button').removeClass('selected');
       $('.investment-button').removeClass('selected');
       $('.features-button').removeClass('selected');
+      $('.advancedFilters__floor-checkbox-input').prop('checked', false);
 
       $('#rooms').val('');
       $('#floors').val('');
       $('#status').val('');
       $('#investment').val('');
       $('#features').val('');
+
+      $('#advancedFilters__selectedFloors').text('dowolne');
       
       var slider = document.getElementById('slider-range');
       slider.noUiSlider.set([20, 120]);
