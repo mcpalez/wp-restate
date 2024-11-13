@@ -4,48 +4,61 @@
   transition: top 0.23s ease-in-out;
   background: white;
   z-index: 10;
-  box-shadow: $kui-shadow-100;
+  border-bottom: 1px solid $kui-disabled-border-500;
 
-  .flex {
-    .filters-trigger {
-      display: flex;
-      width: 100%;
-      gap: 7px;
+  .container {
+    padding-block: 15px;
 
-      button {
-        background: $pure-white;
-        border: none;
-        height: 36px;
-        width: 100%;
-        padding: 0 13px;
-        font-weight: 450;
-        font-size: 14px;
-        border: 1px solid $color-disabled;
-        border-radius: 5px;
-        color: $kui-theme;
+    .flex {
+      .filters-trigger {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
         gap: 7px;
 
-        svg {
-          width: 19px;
-          height: auto;
+        button {
+          background: $pure-white;
+          border: none;
+          height: 32px;
+          width: 100%;
+          padding: 0 10px;
+          font-weight: 400;
+          font-size: 14.4px;
+          border: 1px solid $kui-disabled-500;
+          border-radius: 4px;
+          color: $kui-theme;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
 
-          path {
-            stroke: $kui-theme;
+          svg {
+            width: 19px;
+            height: auto;
+
+            path {
+              stroke: $kui-theme;
+              stroke-width: 1.8;
+            }
           }
-        }
 
-        #advancedFilters__count {
-          margin-left: 3px;
-          font-weight: 700;
-          color: $pure-white;
-          background: $kui-theme;
-          border-radius: 10px;
-          height: 17px;
-          width: 17px;
-          font-size: 11px;
+          &:nth-child(3) {
+            svg {
+              path {
+                stroke-width: 1.7;
+              }
+            }
+          }
+
+          #advancedFilters__count {
+            margin-left: 3px;
+            font-weight: 700;
+            color: $pure-white;
+            background: $kui-theme;
+            border-radius: 5px;
+            height: 17px;
+            width: 17px;
+            font-size: 11px;
+          }
         }
       }
     }

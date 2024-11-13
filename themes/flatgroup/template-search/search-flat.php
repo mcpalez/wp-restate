@@ -64,20 +64,15 @@ $flat_sizes = [
 
 <?php get_header();?>
 <div id="search-bar-wrapper">
-  <div class="container mx-auto px-5 py-2">
+  <div class="container mx-auto px-5">
     <div class="flex flex-row gap-5">
       <div class="filters-trigger">
         <button id="advancedFilters__open">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 15H21M3 15H5M5 15C5 16.3807 6.11929 17.5 7.5 17.5C8.88071 17.5 10 16.3807 10 15C10 13.6193 8.88071 12.5 7.5 12.5C6.11929 12.5 5 13.6193 5 15ZM20 9H21M3 9H10M16.5 11.5C15.1193 11.5 14 10.3807 14 9C14 7.61929 15.1193 6.5 16.5 6.5C17.8807 6.5 19 7.61929 19 9C19 10.3807 17.8807 11.5 16.5 11.5Z" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          Filtruj
-          <span id="advancedFilters__count" style="display:none;">0</span></button>
-        <button id="sortDrawer__open">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11 16L8 19M8 19L5 16M8 19V5M13 8L16 5M16 5L19 8M16 5V19" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          Sortuj
+          Filtry
+          <span id="advancedFilters__count" style="display:none;">0</span>
         </button>
         <button id="viewDrawer__open">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,6 +80,12 @@ $flat_sizes = [
             <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           Widok
+        </button>
+        <button id="sortDrawer__open">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 16L8 19M8 19L5 16M8 19V5M13 8L16 5M16 5L19 8M16 5V19" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Sortowanie
         </button>
       </div>
     </div>
@@ -126,6 +127,11 @@ $flat_sizes = [
                 <div class="advancedFilters__parameters__dropdown">
                     <button type="button" id="advancedFilters__floorDropdownButton" class="advancedFilters__dropdown-button">
                       <span id="advancedFilters__selectedFloors">dowolne</span>
+                      <div class="selectedFloors__indicator">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
                     </button>
                     <div id="advancedFilters__floorDropdownContent" class="advancedFilters__dropdown-content">
                         <?php for ($i = 0; $i <= 10; $i++): ?>
@@ -228,9 +234,8 @@ $flat_sizes = [
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13 13L19 19M8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              Pokaz
-              <span id="resultListing-number__count__btn"></span> 
-              wyników
+              Wyniki
+              <span id="resultListing-number__count__btn"></span>
             </span>
           </button>
         </div>
@@ -282,16 +287,6 @@ $flat_sizes = [
         });
         $('#rooms').val(roomsParam);
     }
-
-    // var floorsParam = urlParams.get('floors');
-    // if (floorsParam) {
-    //     var selectedFloors = floorsParam.split(',');
-    //     selectedFloors.forEach(floor => {
-    //         var value = (floor === 'parter') ? 0 : floor;
-    //         $(`.floor-button[data-value="${value}"]`).addClass('selected');
-    //     });
-    //     $('#floors').val(floorsParam);
-    // }
 
     var floorsParam = urlParams.get('floors');
     if (floorsParam) {
@@ -413,6 +408,7 @@ $flat_sizes = [
 
     $('#advancedFilters__floorDropdownButton').on('click', function() {
         $('#advancedFilters__floorDropdownContent').toggle();
+        $(this).toggleClass('is-open');
     });
 
     $('.advancedFilters__floor-checkbox-input').on('change', function() {

@@ -75,7 +75,7 @@
         display: flex;
         align-items: center;
         padding-block: 15px 15px;
-        border-bottom: 1px solid $kui-disabled-border;
+        border-bottom: 1px solid $kui-disabled-border-500;
         position: sticky;
         background: white;
         z-index: 100;
@@ -101,8 +101,8 @@
           left: 15%;
           margin: 0 0 2px 0;
           color: $black-color-500;
-          font-size: 19px;
-          font-weight: 600;
+          font-size: 21px;
+          font-weight: 400;
           line-height: 1.32;
           overflow: hidden;
           text-align: center;
@@ -170,6 +170,7 @@
                   height: 48px;
                   line-height: 1.5;
                   padding: 11px 14px;
+                  border-radius: 4px;
                   box-shadow: none;
                   box-sizing: border-box;
                   touch-action: manipulation;
@@ -242,7 +243,8 @@
                   .status-checkbox-box {
                     width: 22px;
                     height: 22px;
-                    border: 2px solid $kui-disabled-500;
+                    border: 2px solid $kui-theme;
+                    border-radius: 4px;
                     margin-right: 10px;
                     transition: border-color 0.3s ease, background-color 0.3s ease;
                     display: inline-block;
@@ -281,10 +283,10 @@
                   background-color: $kui-disabled;
                   padding: 10px 15px;
                   font-size: 17px;
-                  border-radius: 4px;
                   color: $kui-disabled-500;
                   height: 48px;
                   border: none;
+                  border-radius: 4px;
                   cursor: pointer;
                   width: 100%;
                   text-align: left;
@@ -293,18 +295,19 @@
                   justify-content: space-between;
                   align-items: center;
 
-                  &:after {
-                    content: "";
-                    display: inline-block;
-                    width: 14px;
-                    height: 14px;
-                    border-right: 2.5px solid $black-color-500;
-                    border-bottom: 2.5px solid $black-color-500;
-                    transform: rotate(45deg);
-                    border-radius: 1px;
-                    margin-left: 10px;
-                    margin-bottom: 5px;
+                  .selectedFloors__indicator {
+                    transform: rotate(0deg);
                   }
+
+                  &.is-open {
+                    .selectedFloors__indicator {
+                      transform: rotate(180deg);
+                    }
+                  }
+
+                  // &.is-open {
+                  //   transform: rotate(180deg);
+                  // }
                 }
 
                 .advancedFilters__dropdown-content {
@@ -336,8 +339,8 @@
                       appearance: none;
                       width: 20px;
                       height: 20px;
-                      border: 2px solid $kui-disabled-500;
-                      border-radius: 0;
+                      border-radius: 4px;
+                      border: 2px solid $kui-theme;
                       position: relative;
                       margin-right: 10px;
                       cursor: pointer;
@@ -533,7 +536,7 @@
         align-items: center;
         background: white;
         bottom: 0;
-        height: 72px;
+        height: 81px;
         width: 100%;
         border-top: 1px solid $kui-disabled-border;
 
@@ -546,6 +549,7 @@
             background: $kui-theme;
             padding: 7px 12px;
             font-weight: 600;
+            border-radius: 4px;
             height: 48px;
             width: 100%;
             min-width: 130px;

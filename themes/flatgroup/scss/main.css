@@ -130,42 +130,49 @@ button {
   transition: top 0.23s ease-in-out;
   background: white;
   z-index: 10;
-  box-shadow: 0px 2px 8px 0px rgba(26, 26, 26, 0.16);
+  border-bottom: 1px solid #d3d5d9;
 }
-#search-bar-wrapper .flex .filters-trigger {
+#search-bar-wrapper .container {
+  padding-block: 15px;
+}
+#search-bar-wrapper .container .flex .filters-trigger {
   display: flex;
   width: 100%;
   gap: 7px;
 }
-#search-bar-wrapper .flex .filters-trigger button {
+#search-bar-wrapper .container .flex .filters-trigger button {
   background: #FFF;
   border: none;
-  height: 36px;
+  height: 32px;
   width: 100%;
-  padding: 0 13px;
-  font-weight: 450;
-  font-size: 14px;
-  border: 1px solid #DDDDDD;
-  border-radius: 5px;
+  padding: 0 10px;
+  font-weight: 400;
+  font-size: 14.4px;
+  border: 1px solid #8e939c;
+  border-radius: 4px;
   color: #1c2637;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
 }
-#search-bar-wrapper .flex .filters-trigger button svg {
+#search-bar-wrapper .container .flex .filters-trigger button svg {
   width: 19px;
   height: auto;
 }
-#search-bar-wrapper .flex .filters-trigger button svg path {
+#search-bar-wrapper .container .flex .filters-trigger button svg path {
   stroke: #1c2637;
+  stroke-width: 1.8;
 }
-#search-bar-wrapper .flex .filters-trigger button #advancedFilters__count {
+#search-bar-wrapper .container .flex .filters-trigger button:nth-child(3) svg path {
+  stroke-width: 1.7;
+}
+#search-bar-wrapper .container .flex .filters-trigger button #advancedFilters__count {
   margin-left: 3px;
   font-weight: 700;
   color: #FFF;
   background: #1c2637;
-  border-radius: 10px;
+  border-radius: 5px;
   height: 17px;
   width: 17px;
   font-size: 11px;
@@ -289,7 +296,7 @@ button {
   display: flex;
   align-items: center;
   padding-block: 15px 15px;
-  border-bottom: 1px solid #e2e3e6;
+  border-bottom: 1px solid #d3d5d9;
   position: sticky;
   background: white;
   z-index: 100;
@@ -312,8 +319,8 @@ button {
   left: 15%;
   margin: 0 0 2px 0;
   color: #212121;
-  font-size: 19px;
-  font-weight: 600;
+  font-size: 21px;
+  font-weight: 400;
   line-height: 1.32;
   overflow: hidden;
   text-align: center;
@@ -370,6 +377,7 @@ button {
   height: 48px;
   line-height: 1.5;
   padding: 11px 14px;
+  border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
   touch-action: manipulation;
@@ -431,7 +439,8 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox .status-checkbox-box {
   width: 22px;
   height: 22px;
-  border: 2px solid #5e5e5e;
+  border: 2px solid #1c2637;
+  border-radius: 4px;
   margin-right: 10px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   display: inline-block;
@@ -464,10 +473,10 @@ button {
   background-color: #f3f3f3;
   padding: 10px 15px;
   font-size: 17px;
-  border-radius: 4px;
-  color: #5e5e5e;
+  color: #8e939c;
   height: 48px;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
   width: 100%;
   text-align: left;
@@ -476,17 +485,11 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-#advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-button:after {
-  content: "";
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  border-right: 2.5px solid #212121;
-  border-bottom: 2.5px solid #212121;
-  transform: rotate(45deg);
-  border-radius: 1px;
-  margin-left: 10px;
-  margin-bottom: 5px;
+#advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-button .selectedFloors__indicator {
+  transform: rotate(0deg);
+}
+#advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-button.is-open .selectedFloors__indicator {
+  transform: rotate(180deg);
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content {
   display: none;
@@ -516,8 +519,8 @@ button {
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid #5e5e5e;
-  border-radius: 0;
+  border-radius: 4px;
+  border: 2px solid #1c2637;
   position: relative;
   margin-right: 10px;
   cursor: pointer;
@@ -672,7 +675,7 @@ button {
   align-items: center;
   background: white;
   bottom: 0;
-  height: 72px;
+  height: 81px;
   width: 100%;
   border-top: 1px solid #e2e3e6;
 }
@@ -685,6 +688,7 @@ button {
   background: #1c2637;
   padding: 7px 12px;
   font-weight: 600;
+  border-radius: 4px;
   height: 48px;
   width: 100%;
   min-width: 130px;
