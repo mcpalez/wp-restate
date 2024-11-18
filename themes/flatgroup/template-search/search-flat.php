@@ -178,7 +178,6 @@ $flat_sizes = [
               </div>
             </div>
             <hr class="mt-5">
-            
             <div class="advancedFilters__parameters__container">
               <div class="advancedFilters__parameters__heading">Informacje dodatkowe</div>
               <div class="advancedFilters__parameters__buttons">
