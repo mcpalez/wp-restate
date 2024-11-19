@@ -2,64 +2,6 @@
 /*
 Template Name: Znajdź mieszkanie
 */
-
-$default_size_from = isset($_GET['size_from']) ? $_GET['size_from'] : 20;
-$default_size_to = isset($_GET['size_to']) ? $_GET['size_to'] : 120;
-
-$flat_sizes = [
-  20 => 0,
-  22 => 3,
-  24 => 6,
-  26 => 9,
-  28 => 15,   // Skok o 6
-  30 => 13,   // Spadek o 2
-  32 => 20,   // Skok o 7
-  34 => 17,   // Spadek o 3
-  36 => 25,   // Skok o 8
-  38 => 22,   // Spadek o 3
-  40 => 30,   // Skok o 8
-  42 => 35,   // Skok o 5
-  44 => 33,   // Spadek o 2
-  46 => 40,   // Skok o 7
-  48 => 45,   // Skok o 5
-  50 => 43,   // Spadek o 2
-  52 => 47,   // Szczyt fali, maksymalna wartość
-  54 => 44,   // Spadek o 3
-  56 => 46,   // Wzrost o 2
-  58 => 41,   // Spadek o 5
-  60 => 37,   // Spadek o 4
-  62 => 43,   // Nagły wzrost o 6
-  64 => 38,   // Spadek o 5
-  66 => 33,   // Spadek o 5
-  68 => 28,   // Spadek o 5
-  70 => 35,   // Wzrost o 7
-  72 => 25,   // Spadek o 10
-  74 => 30,   // Wzrost o 5
-  76 => 22,   // Spadek o 8
-  78 => 15,   // Spadek o 7
-  80 => 18,   // Wzrost o 3
-  82 => 12,   // Spadek o 6
-  84 => 20,   // Wzrost o 8
-  86 => 10,   // Spadek o 10
-  88 => 5,    // Spadek o 5
-  90 => 9,    // Wzrost o 4
-  92 => 4,    // Spadek o 5
-  94 => 8,    // Wzrost o 4
-  96 => 3,    // Spadek o 5
-  98 => 0,    // Spadek o 3
-  100 => 5,   // Wzrost o 5
-  102 => 0,   // Spadek o 5
-  104 => 2,   // Wzrost o 2
-  106 => 6,   // Wzrost o 4
-  108 => 1,   // Spadek o 5
-  110 => 3,   // Wzrost o 2
-  112 => 0,   // Spadek o 3
-  114 => 0,   // Stała wartość
-  116 => 0,   // Stała wartość
-  118 => 0,   // Stała wartość
-  120 => 0    // Stała wartość
-];
-
 ?>
 
 <?php get_header();?>
@@ -154,6 +96,45 @@ $flat_sizes = [
               </div>
             </div>
             <div class="advancedFilters__parameters__container">
+                <div class="advancedFilters__parameters__heading">Metraż</div>
+                <div class="advancedFilters__parameters__double-dropdown">
+                  <div class="advancedFilters__parameters__dropdown">
+                      <button type="button" id="advancedFilters__sizeFromDropdownButton" class="advancedFilters__dropdown-button">
+                          <span id="advancedFilters__selectedSizeFrom">dowolne</span>
+                          <div class="dropdown-indicator">
+                              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                          </div>
+                      </button>
+                      <div id="advancedFilters__sizeFromDropdownContent" class="advancedFilters__dropdown-content">
+                          <label class="advancedFilters__dropdown-item" data-value="">Dowolne</label>
+                          <?php for ($i = 20; $i <= 120; $i += 10): ?>
+                              <label class="advancedFilters__dropdown-item" data-value="<?php echo $i; ?>"><?php echo $i; ?> m²</label>
+                          <?php endfor; ?>
+                      </div>
+                  </div>
+                  <div class="advancedFilters__parameters__dropdown">
+                      <button type="button" id="advancedFilters__sizeToDropdownButton" class="advancedFilters__dropdown-button">
+                          <span id="advancedFilters__selectedSizeTo">dowolne</span>
+                          <div class="dropdown-indicator">
+                              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                          </div>
+                      </button>
+                      <div id="advancedFilters__sizeToDropdownContent" class="advancedFilters__dropdown-content">
+                          <label class="advancedFilters__dropdown-item" data-value="">Dowolne</label>
+                          <?php for ($i = 20; $i <= 120; $i += 10): ?>
+                              <label class="advancedFilters__dropdown-item" data-value="<?php echo $i; ?>"><?php echo $i; ?> m²</label>
+                          <?php endfor; ?>
+                      </div>
+                  </div>
+                </div>
+                <input type="hidden" id="size_from" name="size_from" value="">
+                <input type="hidden" id="size_to" name="size_to" value="">
+            </div>
+            <div class="advancedFilters__parameters__container">
               <div class="advancedFilters__parameters__heading">Aktualność oferty</div>
               <div class="advancedFilters__parameters__buttons">
                 <label class="status-checkbox">
@@ -189,38 +170,6 @@ $flat_sizes = [
                 <input type="hidden" id="features" name="features" value="<?php echo $default_features; ?>">
               </div>
             </div>
-            <div class="advancedFilters__parameters__container hidden">
-              <div class="advancedFilters__parameters__heading">
-                Size range
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10 9V14M10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 14.9706 14.9706 19 10 19ZM10.0498 6V6.1L9.9502 6.1002V6H10.0498Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="advancedFilters__parameters__noUi--size-amount">
-                <div id="amount"> 
-                  <div id="amount_flat_size_container">
-                    <div id="noui_size_from">
-                      <?php echo number_format($default_size_from, 2); ?> m²
-                    </div>
-                  </div>
-                  <span> – </span>
-                  <div id="amount_flat_size_container">
-                    <div id="noui_size_to">
-                      <?php echo number_format($default_size_to, 2); ?> m²
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="advancedFilters__parameters__noUi">
-                <div class="slider-content-size">
-                  <div id="histogram">
-                  </div>
-                  <div id="slider-range"></div>
-                  <input type="hidden" id="size_from" name="size_from" value="<?php echo $default_size_from; ?>">
-                  <input type="hidden" id="size_to" name="size_to" value="<?php echo $default_size_to; ?>">
-                </div>
-              </div>
-            </div>
           </form>
         </div>
       </div>
@@ -234,7 +183,7 @@ $flat_sizes = [
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13 13L19 19M8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              Wyniki
+              Pokaż wyniki
               <span id="resultListing-number__count__btn"></span>
             </span>
           </button>
@@ -279,6 +228,87 @@ $flat_sizes = [
     var urlParams = new URLSearchParams(window.location.search);
     var viewParam = urlParams.get('view');
 
+    // --- Pobranie parametrów `size_from` i `size_to` z URL ---
+    var sizeFromParam = urlParams.get('size_from');
+    var sizeToParam = urlParams.get('size_to');
+
+    if (sizeFromParam) {
+        $('#size_from').val(sizeFromParam);
+    }
+
+    if (sizeToParam) {
+        $('#size_to').val(sizeToParam);
+    }
+
+    // --- Event Listener dla pól size_from i size_to ---
+    $('#size_from, #size_to').on('change', function() {
+        updateSizeParams();
+        fetchResults();
+    });
+
+    function updateSizeParams() {
+        var sizeFrom = $('#size_from').val();
+        var sizeTo = $('#size_to').val();
+
+        if (sizeFrom) {
+            urlParams.set('size_from', sizeFrom);
+        } else {
+            urlParams.delete('size_from');
+        }
+
+        if (sizeTo) {
+            urlParams.set('size_to', sizeTo);
+        } else {
+            urlParams.delete('size_to');
+        }
+
+        // Aktualizacja URL w przeglądarce
+        var newURL = '<?php echo home_url("/znajdz-mieszkanie/"); ?>?' + urlParams.toString();
+        history.replaceState(null, '', newURL);
+    }
+
+    // Obsługa kliknięcia na dropdown "Od"
+    $('#advancedFilters__sizeFromDropdownButton').on('click', function() {
+        $('#advancedFilters__sizeFromDropdownContent').toggle();
+        $(this).toggleClass('is-open');
+    });
+
+    // Obsługa kliknięcia na dropdown "Do"
+    $('#advancedFilters__sizeToDropdownButton').on('click', function() {
+        $('#advancedFilters__sizeToDropdownContent').toggle();
+        $(this).toggleClass('is-open');
+    });
+
+    // Wybór wartości w dropdownie "Od"
+    $('#advancedFilters__sizeFromDropdownContent .advancedFilters__dropdown-item').on('click', function() {
+        var value = $(this).data('value');
+        var text = value ? `${value} m²` : 'Dowolne';
+
+        $('#advancedFilters__selectedSizeFrom').text(text);
+        $('#size_from').val(value);
+
+        fetchResults();
+    });
+
+    // Wybór wartości w dropdownie "Do"
+    $('#advancedFilters__sizeToDropdownContent .advancedFilters__dropdown-item').on('click', function() {
+        var value = $(this).data('value');
+        var text = value ? `${value} m²` : 'Dowolne';
+
+        $('#advancedFilters__selectedSizeTo').text(text);
+        $('#size_to').val(value);
+
+        fetchResults();
+    });
+
+    // Zamknięcie dropdownów po kliknięciu poza
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('.advancedFilters__parameters__dropdown').length) {
+            $('#advancedFilters__sizeFromDropdownContent').hide();
+            $('#advancedFilters__sizeToDropdownContent').hide();
+        }
+    });
+
     var roomsParam = urlParams.get('rooms');
     if (roomsParam) {
         var selectedRooms = roomsParam.split(',');
@@ -316,73 +346,6 @@ $flat_sizes = [
       $('#features').val(featuresParam);
     }
 
-    var flatSizes = <?php echo json_encode($flat_sizes); ?>;
-
-    var slider = document.getElementById('slider-range');
-    noUiSlider.create(slider, {
-        start: [<?php echo $default_size_from; ?>, <?php echo $default_size_to; ?>],
-        connect: true,
-        range: {
-            'min': 20,
-            'max': 120
-        },
-        step: 2,
-        tooltips: [true, true],
-        format: {
-            to: function (value) {
-                return Math.round(value) + ' m²';
-            },
-            from: function (value) {
-                return Number(value.replace(' m²', ''));
-            }
-        }
-    });
-
-    slider.noUiSlider.on('update', function(values, handle) {
-        var sizeFrom = values[0].replace(' m²', '');
-        var sizeTo = values[1].replace(' m²', '');
-        $("#size_from").val(sizeFrom);
-        $("#size_to").val(sizeTo);
-        $("#noui_size_from").text(values[0]);
-        $("#noui_size_to").text(values[1]);
-        updateHistogram(flatSizes, sizeFrom, sizeTo);
-        updateActiveFiltersCount();
-        fetchResults();
-    });
-
-    function updateHistogram(flatSizes, minSize, maxSize) {
-      if (!flatSizes || typeof flatSizes !== 'object') {
-          console.error('Invalid flatSizes data:', flatSizes);
-          return;
-      }
-
-      var histogram = document.getElementById('histogram');
-      histogram.innerHTML = '';
-      var maxFrequency = Math.max(...Object.values(flatSizes));
-
-      Object.keys(flatSizes).forEach(size => {
-        var numericSize = Number(size);
-        var frequency = flatSizes[size];
-        var bar = document.createElement('div');
-        bar.className = 'bar';
-        bar.style.height = (frequency / maxFrequency * 100) + '%';
-        bar.style.width = '2%';
-        bar.style.borderRadius = '5px 5px 0 0';
-        bar.style.marginRight = '1px'; 
-
-        if (numericSize >= minSize && numericSize <= maxSize) {
-            bar.style.backgroundColor = '#eeeeee';
-        } else {
-            bar.style.backgroundColor = '#eeeeee'; 
-        }
-        histogram.appendChild(bar);
-        });
-    }
-
-    if (flatSizes) {
-        updateHistogram(flatSizes, <?php echo $default_size_from; ?>, <?php echo $default_size_to; ?>);
-    }
-
     $('.room-button').on('click', function() {
         $(this).toggleClass('selected');
         updateRoomsInput();
@@ -397,14 +360,6 @@ $flat_sizes = [
         $('#rooms').val(selectedRooms.join(','));
         updateActiveFiltersCount();
     }
-
-    // $('.floor-button').on('click', function() {
-    //     var value = $(this).data('value');
-    //     value = (value === 0) ? 'parter' : value;
-    //     $(this).toggleClass('selected');
-    //     updateFloorsInput();
-    //     fetchResults();
-    // });
 
     $('#advancedFilters__floorDropdownButton').on('click', function() {
         $('#advancedFilters__floorDropdownContent').toggle();
@@ -523,9 +478,9 @@ $flat_sizes = [
       if ($('#floors').val()) activeFilters++;
       if ($('#investment').val()) activeFilters++;
       if ($('#status').val()) activeFilters++;
-      if ($('#size_from').val() > 20 || $('#size_to').val() < 120) activeFilters++;
-      
       if ($('#features').val()) activeFilters++;
+      if ($('#size_from').val()) activeFilters++;
+      if ($('#size_to').val()) activeFilters++;
       
       var $activeFiltersCount = $('#advancedFilters__count');
       if (activeFilters > 0) {
@@ -576,7 +531,6 @@ $flat_sizes = [
     function updateURL(formData) {
         var urlParams = new URLSearchParams(formData);
 
-        // Zbieramy wartości statusów i eliminujemy duplikaty
         var uniqueStatuses = [];
         $('.status-checkbox-input:checked').each(function() {
             var value = $(this).val();
@@ -585,22 +539,19 @@ $flat_sizes = [
             }
         });
 
-        // Ustawiamy unikalne statusy
-        urlParams.delete('status'); // Usuwamy istniejące parametry status
+        urlParams.delete('status'); 
         uniqueStatuses.forEach(status => {
             urlParams.append('status', status);
         });
 
-        // Upewnij się, że usuwasz puste parametry
         ['size_from', 'size_to', 'rooms', 'floors', 'investment', 'features', 'view'].forEach(param => {
             if (!urlParams.get(param)) {
                 urlParams.delete(param);
             }
         });
 
-        // Tworzenie nowego URL
         var newURL = '<?php echo home_url('/znajdz-mieszkanie/'); ?>?' + urlParams.toString();
-        history.replaceState(null, '', newURL); // Aktualizacja URL bez przeładowania strony
+        history.replaceState(null, '', newURL);
     }
 
     $('#search-form input, #search-form select').on('change', function() {
@@ -620,11 +571,11 @@ $flat_sizes = [
       $('#status').val('');
       $('#investment').val('');
       $('#features').val('');
+      $('#size_from, #size_to').val('');
 
+      $('#advancedFilters__selectedSizeFrom').text('Dowolne');
+      $('#advancedFilters__selectedSizeTo').text('Dowolne');
       $('#advancedFilters__selectedFloors').text('dowolne');
-      
-      var slider = document.getElementById('slider-range');
-      slider.noUiSlider.set([20, 120]);
       
       fetchResults();
       updateActiveFiltersCount();
