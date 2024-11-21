@@ -545,6 +545,13 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:hover {
   border-color: #212121;
 }
+#advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown {
+  display: flex;
+  gap: 10px;
+}
+#advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown .advancedFilters__parameters__dropdown {
+  flex: 1;
+}
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi {
   display: flex;
   flex-direction: row;

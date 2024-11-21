@@ -372,6 +372,15 @@
                 }
               }
 
+              .advancedFilters__parameters__double-dropdown {
+                display: flex;
+                gap: 10px;
+
+                .advancedFilters__parameters__dropdown {
+                  flex: 1;
+                }
+              }
+
               .advancedFilters__parameters__noUi {
                 display: flex;
                 flex-direction: row;
