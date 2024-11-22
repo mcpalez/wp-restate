@@ -68,7 +68,7 @@ Template Name: Znajdź mieszkanie
                 <div class="advancedFilters__parameters__heading">Piętro</div>
                 <div class="advancedFilters__parameters__dropdown">
                     <button type="button" id="advancedFilters__floorDropdownButton" class="advancedFilters__dropdown-button">
-                      <span id="advancedFilters__selectedFloors">dowolne</span>
+                      <span id="advancedFilters__selectedFloors">Dowolne</span>
                       <div class="selectedFloors__indicator">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -100,7 +100,7 @@ Template Name: Znajdź mieszkanie
                 <div class="advancedFilters__parameters__double-dropdown">
                   <div class="advancedFilters__parameters__dropdown">
                       <button type="button" id="advancedFilters__sizeFromDropdownButton" class="advancedFilters__dropdown-button">
-                          <span id="advancedFilters__selectedSizeFrom">dowolne</span>
+                          <span id="advancedFilters__selectedSizeFrom">Dowolne</span>
                           <div class="dropdown-indicator">
                               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -116,7 +116,7 @@ Template Name: Znajdź mieszkanie
                   </div>
                   <div class="advancedFilters__parameters__dropdown">
                       <button type="button" id="advancedFilters__sizeToDropdownButton" class="advancedFilters__dropdown-button">
-                          <span id="advancedFilters__selectedSizeTo">dowolne</span>
+                          <span id="advancedFilters__selectedSizeTo">Dowolne</span>
                           <div class="dropdown-indicator">
                               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -575,7 +575,7 @@ Template Name: Znajdź mieszkanie
 
       $('#advancedFilters__selectedSizeFrom').text('Dowolne');
       $('#advancedFilters__selectedSizeTo').text('Dowolne');
-      $('#advancedFilters__selectedFloors').text('dowolne');
+      $('#advancedFilters__selectedFloors').text('Dowolne');
       
       fetchResults();
       updateActiveFiltersCount();
