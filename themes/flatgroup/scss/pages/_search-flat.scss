@@ -16,27 +16,28 @@
         gap: 7px;
 
         button {
-          background: $kui-disabled;
+          background: $kui-theme-dark;
           border: none;
-          height: 32px;
+          height: 42px;
           width: 100%;
           padding: 0 10px;
-          font-weight: 400;
-          font-size: 14.4px;
+          font-weight: 600;
+          font-size: 17px;
           border-radius: 4px;
-          color: $kui-black;
+          color: $kui-white;
           display: flex;
           align-items: center;
           justify-content: center;
           gap: 7px;
 
           svg {
-            width: 19px;
+            width: 21px;
             height: auto;
+            margin-top: 2px;
 
             path {
-              stroke: $kui-black;
-              stroke-width: 1.8;
+              stroke: $kui-white;
+              stroke-width: 2;
             }
           }
 
@@ -53,10 +54,10 @@
             font-weight: 700;
             color: $pure-white;
             background: $kui-theme;
-            border-radius: 2px;
-            height: 17px;
-            width: 17px;
-            font-size: 11px;
+            border-radius: 4px;
+            height: 20px;
+            width: 20px;
+            font-size: 13px;
           }
         }
       }

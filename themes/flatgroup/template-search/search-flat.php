@@ -13,10 +13,10 @@ Template Name: Znajdź mieszkanie
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 15H21M3 15H5M5 15C5 16.3807 6.11929 17.5 7.5 17.5C8.88071 17.5 10 16.3807 10 15C10 13.6193 8.88071 12.5 7.5 12.5C6.11929 12.5 5 13.6193 5 15ZM20 9H21M3 9H10M16.5 11.5C15.1193 11.5 14 10.3807 14 9C14 7.61929 15.1193 6.5 16.5 6.5C17.8807 6.5 19 7.61929 19 9C19 10.3807 17.8807 11.5 16.5 11.5Z" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          Filtry
+          Filtruj wyniki
           <span id="advancedFilters__count" style="display:none;">0</span>
         </button>
-        <button id="viewDrawer__open">
+        <!-- <button id="viewDrawer__open">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 18C17.5228 18 22 12 22 12C22 12 17.5228 6 12 6C6.47715 6 2 12 2 12C2 12 6.47715 18 12 18Z" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -28,7 +28,7 @@ Template Name: Znajdź mieszkanie
             <path d="M11 16L8 19M8 19L5 16M8 19V5M13 8L16 5M16 5L19 8M16 5V19" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           Sortowanie
-        </button>
+        </button> -->
       </div>
     </div>
   </div>
@@ -38,7 +38,6 @@ Template Name: Znajdź mieszkanie
     <div id="listing-view">
       <div class="grid grid-cols-1">
         <h1>Znaleziono <span id="resultListing-number__count__view"></span> wyników</h1>
-        <p>Wybierz sortowanie wyników</p>
       </div>
     </div>
     <div id="results">

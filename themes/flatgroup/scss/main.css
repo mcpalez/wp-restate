@@ -141,27 +141,28 @@ button {
   gap: 7px;
 }
 #search-bar-wrapper .container .flex .filters-trigger button {
-  background: #f2f4f5;
+  background: #102838;
   border: none;
-  height: 32px;
+  height: 42px;
   width: 100%;
   padding: 0 10px;
-  font-weight: 400;
-  font-size: 14.4px;
+  font-weight: 600;
+  font-size: 17px;
   border-radius: 4px;
-  color: #212121;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
 }
 #search-bar-wrapper .container .flex .filters-trigger button svg {
-  width: 19px;
+  width: 21px;
   height: auto;
+  margin-top: 2px;
 }
 #search-bar-wrapper .container .flex .filters-trigger button svg path {
-  stroke: #212121;
-  stroke-width: 1.8;
+  stroke: white;
+  stroke-width: 2;
 }
 #search-bar-wrapper .container .flex .filters-trigger button:nth-child(3) svg path {
   stroke-width: 1.7;
@@ -171,10 +172,10 @@ button {
   font-weight: 700;
   color: #FFF;
   background: #7ebd0d;
-  border-radius: 2px;
-  height: 17px;
-  width: 17px;
-  font-size: 11px;
+  border-radius: 4px;
+  height: 20px;
+  width: 20px;
+  font-size: 13px;
 }
 
 #listing-wrapper {
@@ -316,7 +317,7 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__nav p {
   position: absolute;
   left: 15%;
-  margin: 0;
+  margin: 0 0 2px 0;
   color: #212121;
   font-size: 23px;
   font-weight: 700;
@@ -468,15 +469,17 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown {
   position: relative;
   box-sizing: border-box;
+  touch-action: manipulation;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-button {
   background-color: #f2f4f5;
-  padding: 10px 15px;
+  padding: 0 15px;
   font-size: 17px;
   color: #212121;
   height: 48px;
   border: none;
   box-sizing: border-box;
+  touch-action: manipulation;
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
@@ -552,6 +555,8 @@ button {
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown .advancedFilters__parameters__dropdown {
   flex: 1;
+  box-sizing: border-box;
+  touch-action: manipulation;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown .advancedFilters__parameters__dropdown .advancedFilters__dropdown-button .selectedSize__indicator {
   transform: rotate(0deg);

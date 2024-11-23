@@ -99,7 +99,7 @@
         p {
           position: absolute;
           left: 15%;
-          margin: 0;
+          margin: 0 0 2px 0;
           color: $black-color-500;
           font-size: 23px;
           font-weight: 700;
@@ -279,15 +279,17 @@
               .advancedFilters__parameters__dropdown {
                 position: relative;
                 box-sizing: border-box;
+                touch-action: manipulation;
 
                 .advancedFilters__dropdown-button {
                   background-color: $kui-disabled;
-                  padding: 10px 15px;
+                  padding: 0 15px;
                   font-size: 17px;
                   color: $kui-black;
                   height: 48px;
                   border: none;
                   box-sizing: border-box;
+                  touch-action: manipulation;
                   border-radius: 4px;
                   cursor: pointer;
                   width: 100%;
@@ -376,6 +378,8 @@
 
                 .advancedFilters__parameters__dropdown {
                   flex: 1;
+                  box-sizing: border-box;
+                  touch-action: manipulation;
 
                   .advancedFilters__dropdown-button {
 
