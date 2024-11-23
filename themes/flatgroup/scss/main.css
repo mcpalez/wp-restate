@@ -130,7 +130,7 @@ button {
   transition: top 0.23s ease-in-out;
   background: white;
   z-index: 10;
-  border-bottom: 1px solid #d3d5d9;
+  box-shadow: rgba(99, 99, 99, 0.1) 1px 2px 5px 0px;
 }
 #search-bar-wrapper .container {
   padding-block: 15px;
@@ -141,16 +141,15 @@ button {
   gap: 7px;
 }
 #search-bar-wrapper .container .flex .filters-trigger button {
-  background: #FFF;
+  background: #f2f4f5;
   border: none;
   height: 32px;
   width: 100%;
   padding: 0 10px;
   font-weight: 400;
   font-size: 14.4px;
-  border: 1px solid #8e939c;
   border-radius: 4px;
-  color: #121828;
+  color: #212121;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,7 +160,7 @@ button {
   height: auto;
 }
 #search-bar-wrapper .container .flex .filters-trigger button svg path {
-  stroke: #121828;
+  stroke: #212121;
   stroke-width: 1.8;
 }
 #search-bar-wrapper .container .flex .filters-trigger button:nth-child(3) svg path {
@@ -171,8 +170,8 @@ button {
   margin-left: 3px;
   font-weight: 700;
   color: #FFF;
-  background: #121828;
-  border-radius: 5px;
+  background: #7ebd0d;
+  border-radius: 2px;
   height: 17px;
   width: 17px;
   font-size: 11px;
@@ -296,7 +295,7 @@ button {
   display: flex;
   align-items: center;
   padding-block: 15px 15px;
-  border-bottom: 1px solid #d3d5d9;
+  box-shadow: rgba(99, 99, 99, 0.1) 1px 2px 5px 0px;
   position: sticky;
   background: white;
   z-index: 100;
@@ -319,8 +318,8 @@ button {
   left: 15%;
   margin: 0;
   color: #212121;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 23px;
+  font-weight: 700;
   line-height: 1.32;
   overflow: hidden;
   text-align: center;
@@ -369,7 +368,7 @@ button {
   gap: 8px;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons button {
-  background: #f3f3f3;
+  background: #f2f4f5;
   color: #212121;
   font-size: 15px;
   font-weight: 400;
@@ -384,8 +383,8 @@ button {
   transition: transform 0.1s ease;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons button.selected {
-  color: #121828;
-  box-shadow: inset 0 0 0 1.8px #121828;
+  color: #7ebd0d;
+  box-shadow: inset 0 0 0 1.8px #7ebd0d;
   background: #FFF;
   transform: scale(1);
   animation: bounceBack 0.3s ease;
@@ -403,7 +402,7 @@ button {
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .investment-button {
   width: auto;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-button {
@@ -412,14 +411,14 @@ button {
   width: 48%;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .features-button {
-  font-size: 16px;
+  font-size: 17px;
   padding: 11px 14px;
   width: auto;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .room-button {
   width: 51px;
   height: 48px;
-  font-size: 16px;
+  font-size: 17px;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .floor-button {
   width: 42px;
@@ -439,7 +438,7 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox .status-checkbox-box {
   width: 22px;
   height: 22px;
-  border: 2px solid #121828;
+  border: 2px solid #7ebd0d;
   border-radius: 4px;
   margin-right: 10px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
@@ -460,22 +459,24 @@ button {
   transition: opacity 0.3s ease;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox input[type=checkbox]:checked + .status-checkbox-box {
-  background-color: #121828;
-  border-color: #121828;
+  background-color: #7ebd0d;
+  border-color: #7ebd0d;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox input[type=checkbox]:checked + .status-checkbox-box::after {
   opacity: 1;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown {
   position: relative;
+  box-sizing: border-box;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-button {
-  background-color: #f3f3f3;
+  background-color: #f2f4f5;
   padding: 10px 15px;
   font-size: 17px;
-  color: #121828;
+  color: #212121;
   height: 48px;
   border: none;
+  box-sizing: border-box;
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
@@ -494,8 +495,8 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content {
   display: none;
   position: absolute;
-  border-top: 2px solid #121828;
-  background-color: #f3f3f3;
+  border-top: 2px solid #7ebd0d;
+  background-color: #f2f4f5;
   width: 100%;
   z-index: 1;
   max-height: 200px;
@@ -520,14 +521,14 @@ button {
   width: 20px;
   height: 20px;
   border-radius: 4px;
-  border: 2px solid #121828;
+  border: 2px solid #7ebd0d;
   position: relative;
   margin-right: 10px;
   cursor: pointer;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:checked {
-  background-color: #121828;
-  border-color: #121828;
+  background-color: #7ebd0d;
+  border-color: #7ebd0d;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:checked::after {
   content: "";
@@ -543,7 +544,7 @@ button {
   transition: opacity 0.3s ease;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:hover {
-  border-color: #121828;
+  border-color: #7ebd0d;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown {
   display: flex;
@@ -551,6 +552,12 @@ button {
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown .advancedFilters__parameters__dropdown {
   flex: 1;
+}
+#advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown .advancedFilters__parameters__dropdown .advancedFilters__dropdown-button .selectedSize__indicator {
+  transform: rotate(0deg);
+}
+#advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown .advancedFilters__parameters__dropdown .advancedFilters__dropdown-button.is-open .selectedSize__indicator {
+  transform: rotate(180deg);
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi {
   display: flex;
@@ -568,11 +575,11 @@ button {
   height: 2px;
   border: none;
   border-radius: 5px;
-  background: #f3f3f3;
+  background: #f2f4f5;
   box-shadow: none;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-connects .noUi-connect {
-  background: #121828;
+  background: #7ebd0d;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle {
   width: 24px;
@@ -581,7 +588,7 @@ button {
   border-radius: 50px;
   box-shadow: none;
   background: #FFF;
-  border: 2px solid #121828;
+  border: 2px solid #7ebd0d;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle::before, #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle::after {
   display: none;
@@ -684,7 +691,7 @@ button {
   bottom: 0;
   height: 81px;
   width: 100%;
-  border-top: 1px solid #e2e3e6;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px -1px 5px 0px;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__footer .advancedFilters__buttons__container {
   display: flex;
@@ -692,7 +699,7 @@ button {
   justify-content: space-between;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__footer .advancedFilters__buttons__container .advancedFilters__search__button {
-  background: #121828;
+  background: #102838;
   padding: 7px 12px;
   font-weight: 600;
   border-radius: 4px;

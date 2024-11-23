@@ -75,7 +75,7 @@
         display: flex;
         align-items: center;
         padding-block: 15px 15px;
-        border-bottom: 1px solid $kui-disabled-border-500;
+        box-shadow: rgba(99, 99, 99, 0.1) 1px 2px 5px 0px;
         position: sticky;
         background: white;
         z-index: 100;
@@ -101,8 +101,8 @@
           left: 15%;
           margin: 0;
           color: $black-color-500;
-          font-size: 17px;
-          font-weight: 500;
+          font-size: 23px;
+          font-weight: 700;
           line-height: 1.32;
           overflow: hidden;
           text-align: center;
@@ -201,7 +201,7 @@
 
                 .investment-button {
                   width: auto;
-                  font-size: 16px;
+                  font-size: 17px;
                   font-weight: 400;
                 }
 
@@ -212,7 +212,7 @@
                 }
 
                 .features-button {
-                  font-size: 16px;
+                  font-size: 17px;
                   padding: 11px 14px;
                   width: auto;
                 }
@@ -220,7 +220,7 @@
                 .room-button {
                   width: 51px;
                   height: 48px;
-                  font-size: 16px;
+                  font-size: 17px;
                 }
 
                 .floor-button {
@@ -278,14 +278,16 @@
 
               .advancedFilters__parameters__dropdown {
                 position: relative;
+                box-sizing: border-box;
 
                 .advancedFilters__dropdown-button {
                   background-color: $kui-disabled;
                   padding: 10px 15px;
                   font-size: 17px;
-                  color: $kui-theme;
+                  color: $kui-black;
                   height: 48px;
                   border: none;
+                  box-sizing: border-box;
                   border-radius: 4px;
                   cursor: pointer;
                   width: 100%;
@@ -304,10 +306,6 @@
                       transform: rotate(180deg);
                     }
                   }
-
-                  // &.is-open {
-                  //   transform: rotate(180deg);
-                  // }
                 }
 
                 .advancedFilters__dropdown-content {
@@ -378,6 +376,19 @@
 
                 .advancedFilters__parameters__dropdown {
                   flex: 1;
+
+                  .advancedFilters__dropdown-button {
+
+                    .selectedSize__indicator {
+                      transform: rotate(0deg);
+                    }
+
+                    &.is-open {
+                      .selectedSize__indicator {
+                        transform: rotate(180deg);
+                      }
+                    }
+                  }
                 }
               }
 
@@ -547,7 +558,7 @@
         bottom: 0;
         height: 81px;
         width: 100%;
-        border-top: 1px solid $kui-disabled-border;
+        box-shadow: rgba(99, 99, 99, 0.1) 0px -1px 5px 0px;
 
         .advancedFilters__buttons__container {
           display: flex;
@@ -555,7 +566,7 @@
           justify-content: space-between;
 
           .advancedFilters__search__button {
-            background: $kui-theme;
+            background: $kui-theme-dark;
             padding: 7px 12px;
             font-weight: 600;
             border-radius: 4px;

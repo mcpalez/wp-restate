@@ -55,7 +55,7 @@ Template Name: Znajdź mieszkanie
       <div class="advancedFilters__nav">
         <button id="advancedFilters__close">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 19L8 12L15 5" stroke="white" stroke-width="2" stroke-linecap="square"/>
+            <path d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
         <p>Filtry</p>
@@ -101,7 +101,7 @@ Template Name: Znajdź mieszkanie
                   <div class="advancedFilters__parameters__dropdown">
                       <button type="button" id="advancedFilters__sizeFromDropdownButton" class="advancedFilters__dropdown-button">
                           <span id="advancedFilters__selectedSizeFrom">Dowolne</span>
-                          <div class="dropdown-indicator">
+                          <div class="selectedSize__indicator">
                               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
@@ -117,7 +117,7 @@ Template Name: Znajdź mieszkanie
                   <div class="advancedFilters__parameters__dropdown">
                       <button type="button" id="advancedFilters__sizeToDropdownButton" class="advancedFilters__dropdown-button">
                           <span id="advancedFilters__selectedSizeTo">Dowolne</span>
-                          <div class="dropdown-indicator">
+                          <div class="selectedSize__indicator">
                               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>

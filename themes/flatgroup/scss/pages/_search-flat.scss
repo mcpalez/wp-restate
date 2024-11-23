@@ -4,7 +4,7 @@
   transition: top 0.23s ease-in-out;
   background: white;
   z-index: 10;
-  border-bottom: 1px solid $kui-disabled-border-500;
+  box-shadow: rgba(99, 99, 99, 0.1) 1px 2px 5px 0px;
 
   .container {
     padding-block: 15px;
@@ -16,16 +16,15 @@
         gap: 7px;
 
         button {
-          background: $pure-white;
+          background: $kui-disabled;
           border: none;
           height: 32px;
           width: 100%;
           padding: 0 10px;
           font-weight: 400;
           font-size: 14.4px;
-          border: 1px solid $kui-disabled-500;
           border-radius: 4px;
-          color: $kui-theme;
+          color: $kui-black;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -36,7 +35,7 @@
             height: auto;
 
             path {
-              stroke: $kui-theme;
+              stroke: $kui-black;
               stroke-width: 1.8;
             }
           }
@@ -54,7 +53,7 @@
             font-weight: 700;
             color: $pure-white;
             background: $kui-theme;
-            border-radius: 5px;
+            border-radius: 2px;
             height: 17px;
             width: 17px;
             font-size: 11px;
