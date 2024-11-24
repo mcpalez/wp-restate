@@ -223,8 +223,6 @@ function filter_mieszkania()
                   <div class="grid__content">
                     <div class="grid__investment">
                       <span><?php echo get_field('inwestycja'); ?></span>
-                      <span>•</span>
-                      <span><?php echo get_field('lokalizacja_inwestycji'); ?></span>
                     </div>
                     <div class="grid__num">
                       <span><?php the_title(); ?></span>

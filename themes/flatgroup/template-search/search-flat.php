@@ -5,7 +5,7 @@ Template Name: Znajdź mieszkanie
 ?>
 
 <?php get_header();?>
-<div id="search-bar-wrapper">
+<div id="searchBarWrapper">
   <div class="container mx-auto px-5">
     <div class="flex flex-row gap-5">
       <div class="filters-trigger">
@@ -33,7 +33,7 @@ Template Name: Znajdź mieszkanie
     </div>
   </div>
 </div>
-<div id="listing-wrapper">
+<div id="listingWrapper">
   <div class="container mx-auto px-5 py-2">
     <div id="listing-view">
       <div class="grid grid-cols-1">
@@ -58,7 +58,7 @@ Template Name: Znajdź mieszkanie
           </svg>
         </button>
         <p>Filtry</p>
-        <button class="advancedFilters__clear" id="advancedFilters__clear-btn">Wyczyść</button>
+        <button class="advancedFilters__clear" id="advancedFilters__clear-btn">Wyczyść filtry</button>
       </div>
       <div class="container mx-auto px-5">
         <div class="advancedFilters__parameters">
@@ -270,59 +270,67 @@ Template Name: Znajdź mieszkanie
         history.replaceState(null, '', newURL);
     }
 
-    // Obsługa kliknięcia na dropdown "Od"
-    $('#advancedFilters__sizeFromDropdownButton').on('click', function () {
-        $('#advancedFilters__sizeFromDropdownContent').toggle();
-        $(this).toggleClass('is-open');
-        $('#advancedFilters__sizeToDropdownContent').hide(); // Zamknij drugi dropdown
-        $('#advancedFilters__sizeToDropdownButton').removeClass('is-open');
-    });
+    function toggleDropdown(buttonSelector, contentSelector, closeOthers = true) {
+    if (closeOthers) {
+        $('.advancedFilters__parameters__dropdown-content').hide();
+        $('.advancedFilters__dropdown-button').removeClass('is-open');
+    }
+    var isOpen = $(contentSelector).is(':visible');
+    $(contentSelector).toggle();
+    $(buttonSelector).toggleClass('is-open', !isOpen);
+}
 
-    // Obsługa kliknięcia na dropdown "Do"
-    $('#advancedFilters__sizeToDropdownButton').on('click', function () {
-        $('#advancedFilters__sizeToDropdownContent').toggle();
-        $(this).toggleClass('is-open');
-        $('#advancedFilters__sizeFromDropdownContent').hide(); // Zamknij pierwszy dropdown
-        $('#advancedFilters__sizeFromDropdownButton').removeClass('is-open');
-    });
+function closeAllDropdowns() {
+    $('.advancedFilters__parameters__dropdown-content').hide();
+    $('.advancedFilters__dropdown-button').removeClass('is-open');
+}
 
-    // Wybór wartości w dropdownie "Od"
-    $('#advancedFilters__sizeFromDropdownContent .advancedFilters__dropdown-item').on('click', function () {
+function handleDropdownSelection(itemSelector, displaySelector, inputSelector, dropdownSelector, buttonSelector, valueFormat = (v) => v) {
+    $(itemSelector).on('click', function () {
         var value = $(this).data('value');
-        var text = value ? `${value} m²` : 'Dowolne';
+        var text = value ? valueFormat(value) : 'Dowolne';
 
-        $('#advancedFilters__selectedSizeFrom').text(text);
-        $('#size_from').val(value);
-
-        // Tylko dla aktualnego dropdowna:
-        $('#advancedFilters__sizeFromDropdownContent .advancedFilters__dropdown-item').removeClass('selected');
+        $(displaySelector).text(text);
+        $(inputSelector).val(value);
+        $(itemSelector).removeClass('selected');
         $(this).addClass('selected');
 
-        // Zamknij dropdown po wyborze
-        $('#advancedFilters__sizeFromDropdownContent').hide();
-        $('#advancedFilters__sizeFromDropdownButton').removeClass('is-open');
-
+        $(dropdownSelector).hide();
+        $(buttonSelector).removeClass('is-open'); // Zamknij wskaźnik po wyborze
         fetchResults();
     });
+}
 
-    // Wybór wartości w dropdownie "Do"
-    $('#advancedFilters__sizeToDropdownContent .advancedFilters__dropdown-item').on('click', function () {
-        var value = $(this).data('value');
-        var text = value ? `${value} m²` : 'Dowolne';
+$('#advancedFilters__sizeFromDropdownButton').on('click', function () {
+    toggleDropdown('#advancedFilters__sizeFromDropdownButton', '#advancedFilters__sizeFromDropdownContent');
+});
+handleDropdownSelection(
+    '#advancedFilters__sizeFromDropdownContent .advancedFilters__dropdown-item',
+    '#advancedFilters__selectedSizeFrom',
+    '#size_from',
+    '#advancedFilters__sizeFromDropdownContent',
+    '#advancedFilters__sizeFromDropdownButton',
+    (value) => `${value} m²`
+);
 
-        $('#advancedFilters__selectedSizeTo').text(text);
-        $('#size_to').val(value);
+$('#advancedFilters__sizeToDropdownButton').on('click', function () {
+    toggleDropdown('#advancedFilters__sizeToDropdownButton', '#advancedFilters__sizeToDropdownContent');
+});
+handleDropdownSelection(
+    '#advancedFilters__sizeToDropdownContent .advancedFilters__dropdown-item',
+    '#advancedFilters__selectedSizeTo',
+    '#size_to',
+    '#advancedFilters__sizeToDropdownContent',
+    '#advancedFilters__sizeToDropdownButton',
+    (value) => `${value} m²`
+);
 
-        // Tylko dla aktualnego dropdowna:
-        $('#advancedFilters__sizeToDropdownContent .advancedFilters__dropdown-item').removeClass('selected');
-        $(this).addClass('selected');
+$(document).on('click', function (event) {
+    if (!$(event.target).closest('.advancedFilters__parameters__dropdown').length) {
+        closeAllDropdowns();
+    }
+});
 
-        // Zamknij dropdown po wyborze
-        $('#advancedFilters__sizeToDropdownContent').hide();
-        $('#advancedFilters__sizeToDropdownButton').removeClass('is-open');
-
-        fetchResults();
-    });
 
     // Zamknięcie dropdownów po kliknięciu poza
     $(document).on('click', function(event) {
@@ -614,7 +622,7 @@ Template Name: Znajdź mieszkanie
   });
 
   document.addEventListener("DOMContentLoaded", function() {
-    const searchBar = document.getElementById("search-bar-wrapper");
+    const searchBar = document.getElementById("searchBarWrapper");
     let lastScrollTop = 0;
     let isHidden = false;
 

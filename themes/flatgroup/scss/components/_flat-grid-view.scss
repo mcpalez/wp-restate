@@ -1,10 +1,9 @@
 .flat-item__element {
   .grid__view {
-    border: 1px solid $black-color-200;
+    border: 1px solid $kui-disabled-200;
     background: $pure-white;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 1rem;
-    box-shadow: 0 2px 8px #034ace1f;
 
     &:hover {
       border-color: $black-color-300;
@@ -20,11 +19,13 @@
           &.status-wolne {
             span {
               color: white;
-              background: $denim-color-500;
+              background: $kui-theme;
               border: none;
-              padding: 2px 10px;
-              font-size: 14px;
+              padding: 4px 10px;
+              font-size: 11px;
               border-radius: 3px;
+              text-transform: uppercase;
+              letter-spacing: 0.10em;
             }
           }
 
@@ -33,9 +34,11 @@
               color: white;
               background: $black-color-200;
               border: none;
-              padding: 2px 10px;
-              font-size: 14px;
+              padding: 4px 10px;
+              font-size: 11px;
               border-radius: 3px;
+              text-transform: uppercase;
+              letter-spacing: 0.10em;
             }
           }
 
@@ -44,9 +47,11 @@
               color: $primary-color-400;
               background: white;
               border: 1px solid $primary-color-400;
-              padding: 2px 10px;
-              font-size: 14px;
+              padding: 4px 10px;
+              font-size: 11px;
               border-radius: 3px;
+              text-transform: uppercase;
+              letter-spacing: 0.10em;
             }
           }
         }
@@ -72,7 +77,7 @@
         .grid__investment {
           span {
             line-height: 1;
-            font-size: 14.7px;
+            font-size: 16px;
             color: $black-color-500;
           }
 
@@ -84,8 +89,8 @@
         .grid__num {
           span {
             line-height: 1;
-            font-size: 23px;
-            font-weight: 650;
+            font-size: 28px;
+            font-weight: 500;
             color: $black-color-500;
           }
         }
@@ -117,11 +122,12 @@
           align-items: center;
           justify-content: center;
           display: flex;
-          font-weight: 500;
+          font-weight: 400;
           color: $black-color-500;
           height: 40px;
+          font-size: 16px;
           border-radius: 7px;
-          background: $black-color-100;
+          background: $kui-theme-light
         }
       }
     }
