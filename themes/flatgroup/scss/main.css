@@ -307,7 +307,7 @@ button {
   margin-left: 20px;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__nav #advancedFilters__close svg {
-  width: 27px;
+  width: 23px;
   height: auto;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__nav #advancedFilters__close svg path {
@@ -563,6 +563,24 @@ button {
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown .advancedFilters__parameters__dropdown .advancedFilters__dropdown-button.is-open .selectedSize__indicator {
   transform: rotate(180deg);
+}
+#advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item {
+  position: relative;
+}
+#advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item::after {
+  content: "";
+}
+#advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item.selected::after {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 12px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none"><path d="M1 6L5.24264 10.2426L13.727 1.75732" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi {
   display: flex;

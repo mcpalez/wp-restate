@@ -109,7 +109,9 @@ Template Name: Znajdź mieszkanie
                       <div id="advancedFilters__sizeFromDropdownContent" class="advancedFilters__dropdown-content">
                           <label class="advancedFilters__dropdown-item" data-value="">Dowolne</label>
                           <?php for ($i = 20; $i <= 120; $i += 10): ?>
-                              <label class="advancedFilters__dropdown-item" data-value="<?php echo $i; ?>"><?php echo $i; ?> m²</label>
+                              <label class="advancedFilters__dropdown-item" data-value="<?php echo $i; ?>">
+                                <?php echo $i; ?> m²
+                              </label>
                           <?php endfor; ?>
                       </div>
                   </div>
@@ -125,7 +127,9 @@ Template Name: Znajdź mieszkanie
                       <div id="advancedFilters__sizeToDropdownContent" class="advancedFilters__dropdown-content">
                           <label class="advancedFilters__dropdown-item" data-value="">Dowolne</label>
                           <?php for ($i = 20; $i <= 120; $i += 10): ?>
-                              <label class="advancedFilters__dropdown-item" data-value="<?php echo $i; ?>"><?php echo $i; ?> m²</label>
+                              <label class="advancedFilters__dropdown-item" data-value="<?php echo $i; ?>">
+                                <?php echo $i; ?> m²
+                              </label>
                           <?php endfor; ?>
                       </div>
                   </div>
@@ -286,6 +290,10 @@ Template Name: Znajdź mieszkanie
         $('#advancedFilters__selectedSizeFrom').text(text);
         $('#size_from').val(value);
 
+        $('#advancedFilters__sizeFromDropdownContent .advancedFilters__dropdown-item').removeClass('selected');
+
+        $(this).addClass('selected');
+
         fetchResults();
     });
 
@@ -296,6 +304,10 @@ Template Name: Znajdź mieszkanie
 
         $('#advancedFilters__selectedSizeTo').text(text);
         $('#size_to').val(value);
+
+        $('#advancedFilters__sizeFromDropdownContent .advancedFilters__dropdown-item').removeClass('selected');
+
+        $(this).addClass('selected');
 
         fetchResults();
     });
