@@ -271,43 +271,55 @@ Template Name: Znajdź mieszkanie
     }
 
     // Obsługa kliknięcia na dropdown "Od"
-    $('#advancedFilters__sizeFromDropdownButton').on('click', function() {
+    $('#advancedFilters__sizeFromDropdownButton').on('click', function () {
         $('#advancedFilters__sizeFromDropdownContent').toggle();
         $(this).toggleClass('is-open');
+        $('#advancedFilters__sizeToDropdownContent').hide(); // Zamknij drugi dropdown
+        $('#advancedFilters__sizeToDropdownButton').removeClass('is-open');
     });
 
     // Obsługa kliknięcia na dropdown "Do"
-    $('#advancedFilters__sizeToDropdownButton').on('click', function() {
+    $('#advancedFilters__sizeToDropdownButton').on('click', function () {
         $('#advancedFilters__sizeToDropdownContent').toggle();
         $(this).toggleClass('is-open');
+        $('#advancedFilters__sizeFromDropdownContent').hide(); // Zamknij pierwszy dropdown
+        $('#advancedFilters__sizeFromDropdownButton').removeClass('is-open');
     });
 
     // Wybór wartości w dropdownie "Od"
-    $('#advancedFilters__sizeFromDropdownContent .advancedFilters__dropdown-item').on('click', function() {
+    $('#advancedFilters__sizeFromDropdownContent .advancedFilters__dropdown-item').on('click', function () {
         var value = $(this).data('value');
         var text = value ? `${value} m²` : 'Dowolne';
 
         $('#advancedFilters__selectedSizeFrom').text(text);
         $('#size_from').val(value);
 
+        // Tylko dla aktualnego dropdowna:
         $('#advancedFilters__sizeFromDropdownContent .advancedFilters__dropdown-item').removeClass('selected');
-
         $(this).addClass('selected');
+
+        // Zamknij dropdown po wyborze
+        $('#advancedFilters__sizeFromDropdownContent').hide();
+        $('#advancedFilters__sizeFromDropdownButton').removeClass('is-open');
 
         fetchResults();
     });
 
     // Wybór wartości w dropdownie "Do"
-    $('#advancedFilters__sizeToDropdownContent .advancedFilters__dropdown-item').on('click', function() {
+    $('#advancedFilters__sizeToDropdownContent .advancedFilters__dropdown-item').on('click', function () {
         var value = $(this).data('value');
         var text = value ? `${value} m²` : 'Dowolne';
 
         $('#advancedFilters__selectedSizeTo').text(text);
         $('#size_to').val(value);
 
-        $('#advancedFilters__sizeFromDropdownContent .advancedFilters__dropdown-item').removeClass('selected');
-
+        // Tylko dla aktualnego dropdowna:
+        $('#advancedFilters__sizeToDropdownContent .advancedFilters__dropdown-item').removeClass('selected');
         $(this).addClass('selected');
+
+        // Zamknij dropdown po wyborze
+        $('#advancedFilters__sizeToDropdownContent').hide();
+        $('#advancedFilters__sizeToDropdownButton').removeClass('is-open');
 
         fetchResults();
     });
@@ -576,6 +588,8 @@ Template Name: Znajdź mieszkanie
       $('.investment-button').removeClass('selected');
       $('.features-button').removeClass('selected');
       $('.advancedFilters__floor-checkbox-input').prop('checked', false);
+      $('#advancedFilters__sizeFromDropdownContent .advancedFilters__dropdown-item').removeClass('selected');
+      $('#advancedFilters__sizeToDropdownContent .advancedFilters__dropdown-item').removeClass('selected');
 
       $('#rooms').val('');
       $('#floors').val('');

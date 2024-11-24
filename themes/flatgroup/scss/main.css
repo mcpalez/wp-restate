@@ -171,7 +171,7 @@ button {
   margin-left: 3px;
   font-weight: 700;
   color: #FFF;
-  background: #7ebd0d;
+  background: #c6ad8f;
   border-radius: 4px;
   height: 20px;
   width: 20px;
@@ -384,8 +384,8 @@ button {
   transition: transform 0.1s ease;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons button.selected {
-  color: #7ebd0d;
-  box-shadow: inset 0 0 0 1.8px #7ebd0d;
+  color: #c6ad8f;
+  box-shadow: inset 0 0 0 1.8px #c6ad8f;
   background: #FFF;
   transform: scale(1);
   animation: bounceBack 0.3s ease;
@@ -439,7 +439,7 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox .status-checkbox-box {
   width: 22px;
   height: 22px;
-  border: 2px solid #7ebd0d;
+  border: 2px solid #c6ad8f;
   border-radius: 4px;
   margin-right: 10px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
@@ -460,8 +460,8 @@ button {
   transition: opacity 0.3s ease;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox input[type=checkbox]:checked + .status-checkbox-box {
-  background-color: #7ebd0d;
-  border-color: #7ebd0d;
+  background-color: #c6ad8f;
+  border-color: #c6ad8f;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox input[type=checkbox]:checked + .status-checkbox-box::after {
   opacity: 1;
@@ -498,7 +498,7 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content {
   display: none;
   position: absolute;
-  border-top: 2px solid #7ebd0d;
+  border-top: 2px solid #c6ad8f;
   background-color: #f2f4f5;
   width: 100%;
   z-index: 1;
@@ -524,14 +524,14 @@ button {
   width: 20px;
   height: 20px;
   border-radius: 4px;
-  border: 2px solid #7ebd0d;
+  border: 2px solid #c6ad8f;
   position: relative;
   margin-right: 10px;
   cursor: pointer;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:checked {
-  background-color: #7ebd0d;
-  border-color: #7ebd0d;
+  background-color: #c6ad8f;
+  border-color: #c6ad8f;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:checked::after {
   content: "";
@@ -547,7 +547,7 @@ button {
   transition: opacity 0.3s ease;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:hover {
-  border-color: #7ebd0d;
+  border-color: #c6ad8f;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown {
   display: flex;
@@ -602,7 +602,7 @@ button {
   box-shadow: none;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-connects .noUi-connect {
-  background: #7ebd0d;
+  background: #c6ad8f;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle {
   width: 24px;
@@ -611,7 +611,7 @@ button {
   border-radius: 50px;
   box-shadow: none;
   background: #FFF;
-  border: 2px solid #7ebd0d;
+  border: 2px solid #c6ad8f;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle::before, #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle::after {
   display: none;
