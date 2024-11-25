@@ -1,8 +1,7 @@
 .flat-item__element {
   .grid__view {
-    border: 1px solid $kui-disabled-200;
+    border: 1px solid $kui-disabled-500;
     background: $pure-white;
-    border-radius: 4px;
     padding: 1rem;
 
     &:hover {
@@ -23,7 +22,6 @@
               border: none;
               padding: 4px 10px;
               font-size: 11px;
-              border-radius: 3px;
               text-transform: uppercase;
               letter-spacing: 0.10em;
             }
@@ -36,7 +34,6 @@
               border: none;
               padding: 4px 10px;
               font-size: 11px;
-              border-radius: 3px;
               text-transform: uppercase;
               letter-spacing: 0.10em;
             }
@@ -49,7 +46,6 @@
               border: 1px solid $primary-color-400;
               padding: 4px 10px;
               font-size: 11px;
-              border-radius: 3px;
               text-transform: uppercase;
               letter-spacing: 0.10em;
             }
@@ -112,13 +108,20 @@
               font-size: 12px;
               text-transform: uppercase;
             }
+
+            .grid__sub--value {
+              font-weight: 500;
+            }
           }
         }
       }
 
       .grid__footer {
+        display: flex;
+        gap: 7px;
+
         button {
-          width: 100%;
+          flex: 1;
           align-items: center;
           justify-content: center;
           display: flex;
@@ -126,8 +129,12 @@
           color: $black-color-500;
           height: 40px;
           font-size: 16px;
-          border-radius: 7px;
-          background: $kui-theme-light
+          background: $kui-disabled-200;
+        }
+
+        .link-to-product {
+          background: $kui-theme;
+          color: $kui-white;
         }
       }
     }

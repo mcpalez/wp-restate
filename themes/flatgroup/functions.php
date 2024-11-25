@@ -244,11 +244,12 @@ function filter_mieszkania()
                   </div>
                   <div class="grid__footer">
                       <button
-                          class="open-modal-btn btn--dark_filled"
+                          class="open-contact-modal-btn"
                           data-contact-property="<?php echo get_field('inwestycja') . '/' . get_field('numer_budynku') . '/' . get_field('pietro') . '/' . get_field('numer_lokalu'); ?>"
                       >
                         Zapytaj o cenę
                       </button>
+                      <button class="link-to-product">Zobacz</button>
                   </div>
                 </div>
               </div>

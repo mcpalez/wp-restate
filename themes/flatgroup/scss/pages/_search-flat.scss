@@ -4,7 +4,7 @@
   transition: top 0.23s ease-in-out;
   background: white;
   z-index: 10;
-  box-shadow: rgba(99, 99, 99, 0.1) 1px 2px 5px 0px;
+  // box-shadow: rgba(99, 99, 99, 0.1) 1px 2px 5px 0px;
 
   .container {
     padding-block: 15px;
@@ -18,12 +18,11 @@
         button {
           background: $kui-theme;
           border: none;
-          height: 42px;
+          height: 40px;
           width: 100%;
           padding: 0 10px;
-          font-weight: 600;
-          font-size: 17px;
-          border-radius: 4px;
+          font-weight: 500;
+          font-size: 16px;
           color: $kui-white;
           display: flex;
           align-items: center;
@@ -33,7 +32,6 @@
           svg {
             width: 21px;
             height: auto;
-            margin-top: 2px;
 
             path {
               stroke: $kui-white;
@@ -54,7 +52,6 @@
             font-weight: 700;
             color: $kui-theme;
             background: $kui-white;
-            border-radius: 4px;
             height: 20px;
             width: 20px;
             font-size: 13px;
@@ -76,9 +73,13 @@
       .grid {
         gap: 5px;
 
-        h1 {
-          font-size: 16px;
-          font-weight: 600;
+        h3 {
+          font-size: 15px;
+          font-weight: 400;
+
+          #resultListing-number__count__view {
+            font-weight: 700;
+          }
         }
 
         p {

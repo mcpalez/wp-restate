@@ -90,7 +90,7 @@ button {
 
 #app-footer {
   padding-block: 35px;
-  background: #1c2637;
+  background: #efefef;
 }
 #app-footer .container .app-footer__top {
   display: flex;
@@ -130,7 +130,6 @@ button {
   transition: top 0.23s ease-in-out;
   background: white;
   z-index: 10;
-  box-shadow: rgba(99, 99, 99, 0.1) 1px 2px 5px 0px;
 }
 #searchBarWrapper .container {
   padding-block: 15px;
@@ -141,14 +140,13 @@ button {
   gap: 7px;
 }
 #searchBarWrapper .container .flex .filters-trigger button {
-  background: #1c2637;
+  background: #9c785b;
   border: none;
-  height: 42px;
+  height: 40px;
   width: 100%;
   padding: 0 10px;
-  font-weight: 600;
-  font-size: 17px;
-  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
   color: white;
   display: flex;
   align-items: center;
@@ -158,7 +156,6 @@ button {
 #searchBarWrapper .container .flex .filters-trigger button svg {
   width: 21px;
   height: auto;
-  margin-top: 2px;
 }
 #searchBarWrapper .container .flex .filters-trigger button svg path {
   stroke: white;
@@ -170,9 +167,8 @@ button {
 #searchBarWrapper .container .flex .filters-trigger button #advancedFilters__count {
   margin-left: 3px;
   font-weight: 700;
-  color: #1c2637;
+  color: #9c785b;
   background: white;
-  border-radius: 4px;
   height: 20px;
   width: 20px;
   font-size: 13px;
@@ -188,9 +184,12 @@ button {
 #listingWrapper .container #listing-view .grid {
   gap: 5px;
 }
-#listingWrapper .container #listing-view .grid h1 {
-  font-size: 16px;
-  font-weight: 600;
+#listingWrapper .container #listing-view .grid h3 {
+  font-size: 15px;
+  font-weight: 400;
+}
+#listingWrapper .container #listing-view .grid h3 #resultListing-number__count__view {
+  font-weight: 700;
 }
 #listingWrapper .container #listing-view .grid p {
   font-size: 14px;
@@ -296,7 +295,6 @@ button {
   display: flex;
   align-items: center;
   padding-block: 15px 15px;
-  box-shadow: rgba(99, 99, 99, 0.1) 1px 2px 5px 0px;
   border-bottom: 1px solid #e9e9e9;
   position: sticky;
   background: white;
@@ -306,16 +304,13 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__nav #advancedFilters__close {
   margin-right: auto;
   margin-left: 20px;
-  background: #f6f6f6;
-  padding: 7px;
-  border-radius: 4px;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__nav #advancedFilters__close svg {
-  width: 16px;
+  width: 20px;
   height: auto;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__nav #advancedFilters__close svg path {
-  stroke: #1c2637;
+  stroke: #9c785b;
   stroke-width: 2.7;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__nav p {
@@ -334,10 +329,12 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__nav #advancedFilters__clear-btn {
   margin-left: auto;
   margin-right: 20px;
+  text-decoration: underline;
   font-size: 16px;
   font-weight: 470;
   color: #212121;
   line-height: 1;
+  opacity: 0.65;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters {
   overflow-y: auto;
@@ -381,7 +378,6 @@ button {
   height: 48px;
   line-height: 1.5;
   padding: 11px 14px;
-  border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
   touch-action: manipulation;
@@ -389,8 +385,8 @@ button {
   box-shadow: inset 0 0 0 1px #e9e9e9;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons button.selected {
-  color: #1c2637;
-  box-shadow: inset 0 0 0 1px #3cd37b;
+  color: #9c785b;
+  box-shadow: inset 0 0 0 2px #9c785b;
   background: #FFF;
   transform: scale(1);
   animation: bounceBack 0.3s ease;
@@ -444,8 +440,7 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox .status-checkbox-box {
   width: 22px;
   height: 22px;
-  border: 2px solid #1c2637;
-  border-radius: 4px;
+  border: 2px solid #9c785b;
   margin-right: 10px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   display: inline-block;
@@ -465,8 +460,8 @@ button {
   transition: opacity 0.3s ease;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox input[type=checkbox]:checked + .status-checkbox-box {
-  background-color: #1c2637;
-  border-color: #1c2637;
+  background-color: #9c785b;
+  border-color: #9c785b;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox input[type=checkbox]:checked + .status-checkbox-box::after {
   opacity: 1;
@@ -485,7 +480,6 @@ button {
   border: 1px solid #e9e9e9;
   box-sizing: border-box;
   touch-action: manipulation;
-  border-radius: 4px;
   cursor: pointer;
   width: 100%;
   text-align: left;
@@ -504,7 +498,7 @@ button {
   display: none;
   position: absolute;
   border: 1px solid #e9e9e9;
-  border-top: 2px solid #1c2637;
+  border-top: 2px solid #9c785b;
   background-color: #f6f6f6;
   width: 100%;
   z-index: 1;
@@ -529,15 +523,15 @@ button {
   appearance: none;
   width: 20px;
   height: 20px;
-  border-radius: 4px;
-  border: 2px solid #1c2637;
+  border: 2px solid #9c785b;
+  border-radius: 0;
   position: relative;
   margin-right: 10px;
   cursor: pointer;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:checked {
-  background-color: #1c2637;
-  border-color: #1c2637;
+  background-color: #9c785b;
+  border-color: #9c785b;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:checked::after {
   content: "";
@@ -553,7 +547,7 @@ button {
   transition: opacity 0.3s ease;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:hover {
-  border-color: #1c2637;
+  border-color: #9c785b;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown {
   display: flex;
@@ -611,7 +605,7 @@ button {
   box-shadow: none;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-connects .noUi-connect {
-  background: #1c2637;
+  background: #9c785b;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle {
   width: 24px;
@@ -620,7 +614,7 @@ button {
   border-radius: 50px;
   box-shadow: none;
   background: #FFF;
-  border: 2px solid #1c2637;
+  border: 2px solid #9c785b;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle::before, #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle::after {
   display: none;
@@ -732,10 +726,9 @@ button {
   justify-content: space-between;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__footer .advancedFilters__buttons__container .advancedFilters__search__button {
-  background: #1c2637;
+  background: #9c785b;
   padding: 7px 12px;
   font-weight: 600;
-  border-radius: 4px;
   height: 48px;
   width: 100%;
   min-width: 130px;
@@ -911,9 +904,8 @@ button {
 }
 
 .flat-item__element .grid__view {
-  border: 1px solid #e9e9e9;
+  border: 1px solid #969696;
   background: #FFF;
-  border-radius: 4px;
   padding: 1rem;
 }
 .flat-item__element .grid__view:hover {
@@ -926,11 +918,10 @@ button {
 }
 .flat-item__element .grid__view .atts .grid__header .grid__status.status-wolne span {
   color: white;
-  background: #1c2637;
+  background: #9c785b;
   border: none;
   padding: 4px 10px;
   font-size: 11px;
-  border-radius: 3px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -940,7 +931,6 @@ button {
   border: none;
   padding: 4px 10px;
   font-size: 11px;
-  border-radius: 3px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -950,7 +940,6 @@ button {
   border: 1px solid #616161;
   padding: 4px 10px;
   font-size: 11px;
-  border-radius: 3px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -1002,8 +991,17 @@ button {
   font-size: 12px;
   text-transform: uppercase;
 }
+.flat-item__element .grid__view .atts .grid__content .grid__table .grid__size .grid__sub--value,
+.flat-item__element .grid__view .atts .grid__content .grid__table .grid__floor .grid__sub--value,
+.flat-item__element .grid__view .atts .grid__content .grid__table .grid__rooms .grid__sub--value {
+  font-weight: 500;
+}
+.flat-item__element .grid__view .atts .grid__footer {
+  display: flex;
+  gap: 7px;
+}
 .flat-item__element .grid__view .atts .grid__footer button {
-  width: 100%;
+  flex: 1;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -1011,6 +1009,9 @@ button {
   color: #212121;
   height: 40px;
   font-size: 16px;
-  border-radius: 7px;
-  background: #f6f6f6;
+  background: #e9e9e9;
+}
+.flat-item__element .grid__view .atts .grid__footer .link-to-product {
+  background: #9c785b;
+  color: white;
 }/*# sourceMappingURL=main.css.map */

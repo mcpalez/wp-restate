@@ -37,7 +37,7 @@ Template Name: Znajdź mieszkanie
   <div class="container mx-auto px-5 py-2">
     <div id="listing-view">
       <div class="grid grid-cols-1">
-        <h1>Znaleziono <span id="resultListing-number__count__view"></span> wyników</h1>
+        <h3>Liczba znalezionych lokali: <span id="resultListing-number__count__view"></span></h3>
       </div>
     </div>
     <div id="results">
