@@ -210,46 +210,46 @@ function filter_mieszkania()
                         </div>
                   </div>
               </div> -->
-              <div class="item local-item grid__view">
-                <div class="atts">
-                  <div class="grid__header">
-                    <div class="grid__status <?php echo get_flat_status_class(get_field('status')); ?>">
+              <div class="item property-grid__view">
+                <div class="property-grid__container">
+                  <div class="property-grid__header">
+                    <div class="property-grid__status <?php echo get_flat_status_class(get_field('status')); ?>">
                         <span><?php echo get_field('status'); ?></span>
                     </div>
                   </div>
-                  <div class="grid__thumbnail">
+                  <div class="property-grid__thumbnail">
                     <img src="<?php echo get_field('thumbnail_grid'); ?>" alt="Rzut mieszkania deweloperskiego o numerze <?php the_title(); ?>">
                   </div>
-                  <div class="grid__content">
-                    <div class="grid__investment">
+                  <div class="property-grid__content">
+                    <div class="property-grid__investment">
                       <span><?php echo get_field('inwestycja'); ?></span>
                     </div>
-                    <div class="grid__num">
+                    <div class="property-grid__num">
                       <span><?php the_title(); ?></span>
                     </div>
-                    <div class="grid__table">
-                      <div class="grid__size">
-                        <div class="grid__sub--heading">Metraż:</div>
-                        <div class="grid__sub--value"><?php echo get_field('metraz'); ?> m²</div>
+                    <div class="property-grid__details">
+                      <div class="property-grid__size">
+                        <div class="property-grid__sub--heading">Metraż:</div>
+                        <div class="property-grid__sub--value"><?php echo get_field('metraz'); ?> m²</div>
                       </div>
-                      <div class="grid__floor">
-                        <div class="grid__sub--heading">Piętro:</div>
-                        <div class="grid__sub--value"><?php echo get_field('pietro'); ?></div>
+                      <div class="property-grid__floor">
+                        <div class="property-grid__sub--heading">Piętro:</div>
+                        <div class="property-grid__sub--value"><?php echo get_field('pietro'); ?></div>
                       </div>
-                      <div class="grid__rooms">
-                        <div class="grid__sub--heading">Pokoje:</div>
-                        <div class="grid__sub--value"><?php echo get_field('pokoje'); ?></div>
+                      <div class="property-grid__rooms">
+                        <div class="property-grid__sub--heading">Pokoje:</div>
+                        <div class="property-grid__sub--value"><?php echo get_field('pokoje'); ?></div>
                       </div>
                     </div>
                   </div>
-                  <div class="grid__footer">
+                  <div class="property-grid__footer">
                       <button
                           class="open-contact-modal-btn"
                           data-contact-property="<?php echo get_field('inwestycja') . '/' . get_field('numer_budynku') . '/' . get_field('pietro') . '/' . get_field('numer_lokalu'); ?>"
                       >
                         Zapytaj o cenę
                       </button>
-                      <button class="link-to-product">Zobacz</button>
+                      <button class="button-view-property">Zobacz</button>
                   </div>
                 </div>
               </div>

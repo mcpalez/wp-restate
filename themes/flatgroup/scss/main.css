@@ -140,7 +140,7 @@ button {
   gap: 7px;
 }
 #searchBarWrapper .container .flex .filters-trigger button {
-  background: #9c785b;
+  background: #323b48;
   border: none;
   height: 40px;
   width: 100%;
@@ -167,7 +167,7 @@ button {
 #searchBarWrapper .container .flex .filters-trigger button #advancedFilters__count {
   margin-left: 3px;
   font-weight: 700;
-  color: #9c785b;
+  color: #323b48;
   background: white;
   height: 20px;
   width: 20px;
@@ -178,8 +178,12 @@ button {
   padding-bottom: 25px;
 }
 #listingWrapper .container #listing-view {
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 #listingWrapper .container #listing-view .grid {
   gap: 5px;
@@ -197,6 +201,26 @@ button {
   color: rgba(4, 19, 43, 0.613);
   font-weight: 400;
   margin: 0;
+}
+#listingWrapper .container #listing-view .drawerSortView {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  opacity: 0.85;
+}
+#listingWrapper .container #listing-view .drawerSortView .sortDrawer__content svg {
+  width: 22px;
+}
+#listingWrapper .container #listing-view .drawerSortView .sortDrawer__content svg path {
+  stroke: #5e5e5e;
+  stroke-width: 1.7;
+}
+#listingWrapper .container #listing-view .drawerSortView .viewDrawer__content .viewDrawer__rows svg {
+  width: 22px;
+}
+#listingWrapper .container #listing-view .drawerSortView .viewDrawer__content .viewDrawer__rows svg path {
+  stroke: #5e5e5e;
+  stroke-width: 1.7;
 }
 #listingWrapper .container #results .container #results-container {
   display: flex;
@@ -310,7 +334,7 @@ button {
   height: auto;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__nav #advancedFilters__close svg path {
-  stroke: #9c785b;
+  stroke: #323b48;
   stroke-width: 2.7;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__nav p {
@@ -329,12 +353,10 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__nav #advancedFilters__clear-btn {
   margin-left: auto;
   margin-right: 20px;
-  text-decoration: underline;
   font-size: 16px;
   font-weight: 470;
   color: #212121;
   line-height: 1;
-  opacity: 0.65;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters {
   overflow-y: auto;
@@ -385,8 +407,8 @@ button {
   box-shadow: inset 0 0 0 1px #e9e9e9;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons button.selected {
-  color: #9c785b;
-  box-shadow: inset 0 0 0 2px #9c785b;
+  color: #323b48;
+  box-shadow: inset 0 0 0 2px #323b48;
   background: #FFF;
   transform: scale(1);
   animation: bounceBack 0.3s ease;
@@ -440,7 +462,7 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox .status-checkbox-box {
   width: 22px;
   height: 22px;
-  border: 2px solid #9c785b;
+  border: 2px solid #323b48;
   margin-right: 10px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   display: inline-block;
@@ -460,8 +482,8 @@ button {
   transition: opacity 0.3s ease;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox input[type=checkbox]:checked + .status-checkbox-box {
-  background-color: #9c785b;
-  border-color: #9c785b;
+  background-color: #323b48;
+  border-color: #323b48;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox input[type=checkbox]:checked + .status-checkbox-box::after {
   opacity: 1;
@@ -498,7 +520,7 @@ button {
   display: none;
   position: absolute;
   border: 1px solid #e9e9e9;
-  border-top: 2px solid #9c785b;
+  border-top: 2px solid #323b48;
   background-color: #f6f6f6;
   width: 100%;
   z-index: 1;
@@ -523,15 +545,15 @@ button {
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid #9c785b;
+  border: 2px solid #323b48;
   border-radius: 0;
   position: relative;
   margin-right: 10px;
   cursor: pointer;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:checked {
-  background-color: #9c785b;
-  border-color: #9c785b;
+  background-color: #323b48;
+  border-color: #323b48;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:checked::after {
   content: "";
@@ -547,11 +569,17 @@ button {
   transition: opacity 0.3s ease;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:hover {
-  border-color: #9c785b;
+  border-color: #323b48;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown {
   display: flex;
   gap: 10px;
+}
+#advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown .price-field__title {
+  font-size: 15px;
+  opacity: 0.5;
+  margin-bottom: 7px;
+  line-height: 1;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown .advancedFilters__parameters__dropdown {
   flex: 1;
@@ -581,7 +609,7 @@ button {
   transform: translateY(-50%);
   width: 15px;
   height: 12px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none"><path d="M1 6L5.24264 10.2426L13.727 1.75732" stroke="%233cd37b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none"><path d="M1 6L5.24264 10.2426L13.727 1.75732" stroke="%239c785b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -605,7 +633,7 @@ button {
   box-shadow: none;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-connects .noUi-connect {
-  background: #9c785b;
+  background: #323b48;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle {
   width: 24px;
@@ -614,7 +642,7 @@ button {
   border-radius: 50px;
   box-shadow: none;
   background: #FFF;
-  border: 2px solid #9c785b;
+  border: 2px solid #323b48;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle::before, #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle::after {
   display: none;
@@ -726,7 +754,7 @@ button {
   justify-content: space-between;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__footer .advancedFilters__buttons__container .advancedFilters__search__button {
-  background: #9c785b;
+  background: #323b48;
   padding: 7px 12px;
   font-weight: 600;
   height: 48px;
@@ -788,13 +816,6 @@ button {
   width: 19px;
   height: 19px;
   margin-right: 6px;
-}
-#advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__footer .advancedFilters__buttons__container .advancedFilters__clear {
-  padding: 7px 12px;
-  text-decoration: underline;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
 }
 
 #sortDrawer {
@@ -903,29 +924,29 @@ button {
   width: 100%;
 }
 
-.flat-item__element .grid__view {
+.flat-item__element .property-grid__view {
   border: 1px solid #969696;
   background: #FFF;
   padding: 1rem;
 }
-.flat-item__element .grid__view:hover {
+.flat-item__element .property-grid__view:hover {
   border-color: #A6A6A6;
 }
-.flat-item__element .grid__view .atts {
+.flat-item__element .property-grid__view .property-grid__container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.flat-item__element .grid__view .atts .grid__header .grid__status.status-wolne span {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__header .property-grid__status.status-wolne span {
   color: white;
-  background: #9c785b;
+  background: #323b48;
   border: none;
   padding: 4px 10px;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-.flat-item__element .grid__view .atts .grid__header .grid__status.status-sprzedane span {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__header .property-grid__status.status-sprzedane span {
   color: white;
   background: #C7C7C7;
   border: none;
@@ -934,7 +955,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-.flat-item__element .grid__view .atts .grid__header .grid__status.status-zarezerwowane span {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__header .property-grid__status.status-zarezerwowane span {
   color: #616161;
   background: white;
   border: 1px solid #616161;
@@ -943,64 +964,64 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-.flat-item__element .grid__view .atts .grid__thumbnail {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__thumbnail {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 210px;
 }
-.flat-item__element .grid__view .atts .grid__thumbnail img {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__thumbnail img {
   width: auto;
   max-height: 100%;
 }
-.flat-item__element .grid__view .atts .grid__content {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.flat-item__element .grid__view .atts .grid__content .grid__investment span {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__investment span {
   line-height: 1;
   font-size: 16px;
   color: #212121;
 }
-.flat-item__element .grid__view .atts .grid__content .grid__investment span:first-child {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__investment span:first-child {
   color: #212121;
 }
-.flat-item__element .grid__view .atts .grid__content .grid__num span {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__num span {
   line-height: 1;
   font-size: 28px;
   font-weight: 500;
   color: #212121;
 }
-.flat-item__element .grid__view .atts .grid__content .grid__table {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__details {
   display: flex;
   flex-direction: row;
   padding-block: 10px;
 }
-.flat-item__element .grid__view .atts .grid__content .grid__table .grid__size,
-.flat-item__element .grid__view .atts .grid__content .grid__table .grid__floor,
-.flat-item__element .grid__view .atts .grid__content .grid__table .grid__rooms {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__details .property-grid__size,
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__details .property-grid__floor,
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__details .property-grid__rooms {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
-.flat-item__element .grid__view .atts .grid__content .grid__table .grid__size .grid__sub--heading,
-.flat-item__element .grid__view .atts .grid__content .grid__table .grid__floor .grid__sub--heading,
-.flat-item__element .grid__view .atts .grid__content .grid__table .grid__rooms .grid__sub--heading {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__details .property-grid__size .property-grid__sub--heading,
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__details .property-grid__floor .property-grid__sub--heading,
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__details .property-grid__rooms .property-grid__sub--heading {
   font-size: 12px;
   text-transform: uppercase;
 }
-.flat-item__element .grid__view .atts .grid__content .grid__table .grid__size .grid__sub--value,
-.flat-item__element .grid__view .atts .grid__content .grid__table .grid__floor .grid__sub--value,
-.flat-item__element .grid__view .atts .grid__content .grid__table .grid__rooms .grid__sub--value {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__details .property-grid__size .property-grid__sub--value,
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__details .property-grid__floor .property-grid__sub--value,
+.flat-item__element .property-grid__view .property-grid__container .property-grid__content .property-grid__details .property-grid__rooms .property-grid__sub--value {
   font-weight: 500;
 }
-.flat-item__element .grid__view .atts .grid__footer {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__footer {
   display: flex;
   gap: 7px;
 }
-.flat-item__element .grid__view .atts .grid__footer button {
+.flat-item__element .property-grid__view .property-grid__container .property-grid__footer button {
   flex: 1;
   align-items: center;
   justify-content: center;
@@ -1011,7 +1032,7 @@ button {
   font-size: 16px;
   background: #e9e9e9;
 }
-.flat-item__element .grid__view .atts .grid__footer .link-to-product {
-  background: #9c785b;
-  color: white;
+.flat-item__element .property-grid__view .property-grid__container .property-grid__footer .button-view-property {
+  background: #bfbfbf;
+  color: #212121;
 }/*# sourceMappingURL=main.css.map */

@@ -11,21 +11,21 @@ Template Name: Znajdź mieszkanie
       <div class="filters-trigger">
         <button id="advancedFilters__open">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14 15H21M3 15H5M5 15C5 16.3807 6.11929 17.5 7.5 17.5C8.88071 17.5 10 16.3807 10 15C10 13.6193 8.88071 12.5 7.5 12.5C6.11929 12.5 5 13.6193 5 15ZM20 9H21M3 9H10M16.5 11.5C15.1193 11.5 14 10.3807 14 9C14 7.61929 15.1193 6.5 16.5 6.5C17.8807 6.5 19 7.61929 19 9C19 10.3807 17.8807 11.5 16.5 11.5Z" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 15H21M3 15H5M5 15C5 16.3807 6.11929 17.5 7.5 17.5C8.88071 17.5 10 16.3807 10 15C10 13.6193 8.88071 12.5 7.5 12.5C6.11929 12.5 5 13.6193 5 15ZM20 9H21M3 9H10M16.5 11.5C15.1193 11.5 14 10.3807 14 9C14 7.61929 15.1193 6.5 16.5 6.5C17.8807 6.5 19 7.61929 19 9C19 10.3807 17.8807 11.5 16.5 11.5Z" stroke="#212121" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
           </svg>
           Filtruj wyniki
           <span id="advancedFilters__count" style="display:none;">0</span>
         </button>
         <!-- <button id="viewDrawer__open">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 18C17.5228 18 22 12 22 12C22 12 17.5228 6 12 6C6.47715 6 2 12 2 12C2 12 6.47715 18 12 18Z" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 18C17.5228 18 22 12 22 12C22 12 17.5228 6 12 6C6.47715 6 2 12 2 12C2 12 6.47715 18 12 18Z" stroke="#212121" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" stroke="#212121" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
           </svg>
           Widok
         </button>
         <button id="sortDrawer__open">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11 16L8 19M8 19L5 16M8 19V5M13 8L16 5M16 5L19 8M16 5V19" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 16L8 19M8 19L5 16M8 19V5M13 8L16 5M16 5L19 8M16 5V19" stroke="#212121" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
           </svg>
           Sortowanie
         </button> -->
@@ -37,7 +37,21 @@ Template Name: Znajdź mieszkanie
   <div class="container mx-auto px-5 py-2">
     <div id="listing-view">
       <div class="grid grid-cols-1">
-        <h3>Liczba znalezionych lokali: <span id="resultListing-number__count__view"></span></h3>
+        <h3>Znaleźliśmy: <span id="resultListing-number__count__view"></span> wyników</h3>
+      </div>
+      <div class="drawerSortView">
+        <div class="sortDrawer__content">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 16L8 19M8 19L5 16M8 19V5M13 8L16 5M16 5L19 8M16 5V19" stroke="#212121" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="viewDrawer__content">
+          <div class="viewDrawer__rows">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 15V16.8002C4 17.9203 4 18.4801 4.21799 18.9079C4.40973 19.2842 4.71547 19.5905 5.0918 19.7822C5.5192 20 6.07899 20 7.19691 20H12M4 15V9M4 15H12M4 9V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H12M4 9H12M12 4H16.8002C17.9203 4 18.4801 4 18.9079 4.21799C19.2842 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V9M12 4V9M12 9V15M12 9H20M12 15V20M12 15H20M12 20H16.8036C17.9215 20 18.4805 20 18.9079 19.7822C19.2842 19.5905 19.5905 19.2842 19.7822 18.9079C20 18.4805 20 17.9215 20 16.8036V15M20 15V9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
     <div id="results">
@@ -54,7 +68,7 @@ Template Name: Znajdź mieszkanie
       <div class="advancedFilters__nav">
         <button id="advancedFilters__close">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#212121" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
           </svg>
         </button>
         <p>Filtry</p>
@@ -70,7 +84,7 @@ Template Name: Znajdź mieszkanie
                       <span id="advancedFilters__selectedFloors">Dowolne</span>
                       <div class="selectedFloors__indicator">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="round"/>
                         </svg>
                       </div>
                     </button>
@@ -95,47 +109,49 @@ Template Name: Znajdź mieszkanie
               </div>
             </div>
             <div class="advancedFilters__parameters__container">
-                <div class="advancedFilters__parameters__heading">Metraż</div>
+                <div class="advancedFilters__parameters__heading">Powierzchnia</div>
                 <div class="advancedFilters__parameters__double-dropdown">
                   <div class="advancedFilters__parameters__dropdown">
-                      <button type="button" id="advancedFilters__sizeFromDropdownButton" class="advancedFilters__dropdown-button">
-                          <span id="advancedFilters__selectedSizeFrom">Dowolne</span>
-                          <div class="selectedSize__indicator">
-                              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>
-                          </div>
-                      </button>
-                      <div id="advancedFilters__sizeFromDropdownContent" class="advancedFilters__dropdown-content">
-                          <label class="advancedFilters__dropdown-item" data-value="">Dowolne</label>
-                          <?php for ($i = 20; $i <= 120; $i += 10): ?>
-                              <label class="advancedFilters__dropdown-item" data-value="<?php echo $i; ?>">
-                                <?php echo $i; ?> m²
-                              </label>
-                          <?php endfor; ?>
-                      </div>
+                    <p class="price-field__title">Od</p>
+                    <button type="button" id="advancedFilters__sizeFromDropdownButton" class="advancedFilters__dropdown-button">
+                        <span id="advancedFilters__selectedSizeFrom">Dowolne</span>
+                        <div class="selectedSize__indicator">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="advancedFilters__sizeFromDropdownContent" class="advancedFilters__dropdown-content">
+                        <label class="advancedFilters__dropdown-item" data-value="">Dowolne</label>
+                        <?php for ($i = 20; $i <= 120; $i += 10): ?>
+                            <label class="advancedFilters__dropdown-item" data-value="<?php echo $i; ?>">
+                              <?php echo $i; ?> m²
+                            </label>
+                        <?php endfor; ?>
+                    </div>
+                    <input type="hidden" id="size_from" name="size_from" value="">
                   </div>
                   <div class="advancedFilters__parameters__dropdown">
-                      <button type="button" id="advancedFilters__sizeToDropdownButton" class="advancedFilters__dropdown-button">
-                          <span id="advancedFilters__selectedSizeTo">Dowolne</span>
-                          <div class="selectedSize__indicator">
-                              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>
-                          </div>
-                      </button>
-                      <div id="advancedFilters__sizeToDropdownContent" class="advancedFilters__dropdown-content">
-                          <label class="advancedFilters__dropdown-item" data-value="">Dowolne</label>
-                          <?php for ($i = 20; $i <= 120; $i += 10): ?>
-                              <label class="advancedFilters__dropdown-item" data-value="<?php echo $i; ?>">
-                                <?php echo $i; ?> m²
-                              </label>
-                          <?php endfor; ?>
-                      </div>
+                    <p class="price-field__title">Do</p>
+                    <button type="button" id="advancedFilters__sizeToDropdownButton" class="advancedFilters__dropdown-button">
+                        <span id="advancedFilters__selectedSizeTo">Dowolne</span>
+                        <div class="selectedSize__indicator">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 16L5 9" stroke="#1D2128" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="advancedFilters__sizeToDropdownContent" class="advancedFilters__dropdown-content">
+                        <label class="advancedFilters__dropdown-item" data-value="">Dowolne</label>
+                        <?php for ($i = 20; $i <= 120; $i += 10): ?>
+                            <label class="advancedFilters__dropdown-item" data-value="<?php echo $i; ?>">
+                              <?php echo $i; ?> m²
+                            </label>
+                        <?php endfor; ?>
+                    </div>
+                    <input type="hidden" id="size_to" name="size_to" value="">
                   </div>
                 </div>
-                <input type="hidden" id="size_from" name="size_from" value="">
-                <input type="hidden" id="size_to" name="size_to" value="">
             </div>
             <div class="advancedFilters__parameters__container">
               <div class="advancedFilters__parameters__heading">Aktualność oferty</div>
@@ -184,7 +200,7 @@ Template Name: Znajdź mieszkanie
             </span>
             <span id="resultListing-number__text">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13 13L19 19M8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 13L19 19M8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15Z" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
               </svg>
               Pokaż wyniki
               <span id="resultListing-number__count__btn"></span>
@@ -202,7 +218,7 @@ Template Name: Znajdź mieszkanie
       <div class="sortDrawer__nav">
           <button id="sortDrawer__close">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#212121" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
             </svg>
           </button>
           <p>Sortowanie</p>

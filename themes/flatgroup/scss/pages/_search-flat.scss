@@ -67,8 +67,12 @@
 
   .container {
     #listing-view {
-      padding-top: 10px;
-      padding-bottom: 20px;
+      padding-top: 5px;
+      padding-bottom: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
 
       .grid {
         gap: 5px;
@@ -88,6 +92,39 @@
           color: $color-primary-100;
           font-weight: 400;
           margin: 0;
+        }
+      }
+
+      .drawerSortView {
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        opacity: 0.85;
+
+        .sortDrawer__content {
+          svg {
+            width: 22px;
+
+            path {
+              stroke: $kui-disabled-700;
+              stroke-width: 1.7;
+            }
+          }
+        }
+
+        .viewDrawer__content {
+          .viewDrawer__rows {
+            svg {
+              width: 22px;
+
+              path {
+                stroke: $kui-disabled-700;
+                stroke-width: 1.7;
+              }
+            }
+          }
+
+          .viewDrawer__table {}
         }
       }
     }

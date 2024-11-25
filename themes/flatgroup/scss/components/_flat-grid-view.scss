@@ -1,5 +1,5 @@
 .flat-item__element {
-  .grid__view {
+  .property-grid__view {
     border: 1px solid $kui-disabled-500;
     background: $pure-white;
     padding: 1rem;
@@ -8,13 +8,13 @@
       border-color: $black-color-300;
     }
 
-    .atts {
+    .property-grid__container {
       display: flex;
       flex-direction: column;
       gap: 10px;
 
-      .grid__header {
-        .grid__status {
+      .property-grid__header {
+        .property-grid__status {
           &.status-wolne {
             span {
               color: white;
@@ -53,7 +53,7 @@
         }
       }
 
-      .grid__thumbnail {
+      .property-grid__thumbnail {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -65,12 +65,12 @@
         }
       }
 
-      .grid__content {
+      .property-grid__content {
         display: flex;
         flex-direction: column;
         gap: 8px;
 
-        .grid__investment {
+        .property-grid__investment {
           span {
             line-height: 1;
             font-size: 16px;
@@ -82,7 +82,7 @@
           }
         }
 
-        .grid__num {
+        .property-grid__num {
           span {
             line-height: 1;
             font-size: 28px;
@@ -91,32 +91,32 @@
           }
         }
 
-        .grid__table {
+        .property-grid__details {
           display: flex;
           flex-direction: row;
           padding-block: 10px;
 
-          .grid__size,
-          .grid__floor,
-          .grid__rooms {
+          .property-grid__size,
+          .property-grid__floor,
+          .property-grid__rooms {
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 7px;
 
-            .grid__sub--heading {
+            .property-grid__sub--heading {
               font-size: 12px;
               text-transform: uppercase;
             }
 
-            .grid__sub--value {
+            .property-grid__sub--value {
               font-weight: 500;
             }
           }
         }
       }
 
-      .grid__footer {
+      .property-grid__footer {
         display: flex;
         gap: 7px;
 
@@ -132,9 +132,9 @@
           background: $kui-disabled-200;
         }
 
-        .link-to-product {
-          background: $kui-theme;
-          color: $kui-white;
+        .button-view-property {
+          background: $kui-disabled-400;
+          color: $kui-black;
         }
       }
     }
