@@ -2,7 +2,7 @@
   .property-grid__view {
     border: 1px solid $kui-disabled-500;
     background: $pure-white;
-    padding: 1rem;
+    padding: 24px;
 
     &:hover {
       border-color: $black-color-300;
@@ -15,6 +15,10 @@
 
       .property-grid__header {
         .property-grid__status {
+          span {
+            font-weight: 700;
+          }
+
           &.status-wolne {
             span {
               color: white;

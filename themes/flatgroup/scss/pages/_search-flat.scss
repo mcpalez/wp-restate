@@ -1,3 +1,27 @@
+#headingPageContent {
+  .breadcrumbs {
+    gap: 5px;
+    padding-block: 10px 0;
+    text-transform: uppercase;
+
+    p {
+      font-size: 14px;
+      margin: 0;
+
+      &.active {
+        color: $kui-disabled-600;
+      }
+    }
+  }
+
+  h5 {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 27px;
+    font-weight: 400;
+  }
+}
+
 #searchBarWrapper {
   position: sticky;
   top: 0;
@@ -16,14 +40,14 @@
         gap: 7px;
 
         button {
-          background: $kui-theme;
-          border: none;
-          height: 40px;
+          background: $kui-white;
+          border: 1px solid $kui-disabled-500;
+          height: 48px;
           width: 100%;
           padding: 0 10px;
-          font-weight: 500;
+          font-weight: 400;
           font-size: 16px;
-          color: $kui-white;
+          color: $kui-black;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -34,7 +58,7 @@
             height: auto;
 
             path {
-              stroke: $kui-white;
+              stroke: $kui-black;
               stroke-width: 2;
             }
           }
@@ -50,8 +74,8 @@
           #advancedFilters__count {
             margin-left: 3px;
             font-weight: 700;
-            color: $kui-theme;
-            background: $kui-white;
+            color: $kui-white;
+            background: $kui-theme;
             height: 20px;
             width: 20px;
             font-size: 13px;

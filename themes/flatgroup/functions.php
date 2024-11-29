@@ -249,7 +249,6 @@ function filter_mieszkania()
                       >
                         Zapytaj o cenę
                       </button>
-                      <button class="button-view-property">Zobacz</button>
                   </div>
                 </div>
               </div>

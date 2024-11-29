@@ -5,6 +5,18 @@ Template Name: Znajdź mieszkanie
 ?>
 
 <?php get_header();?>
+<div id="headingPageContent">
+  <div class="container mx-auto px-5">
+    <div class="flex breadcrumbs">
+      <p>Home</p>
+      <p>/</p>
+      <p class="active">Znajdz mieszkanie</p>
+    </div>
+    <div class="flex">
+      <h5>Wyniki wyszukiwania</h5>
+    </div>
+  </div>
+</div>
 <div id="searchBarWrapper">
   <div class="container mx-auto px-5">
     <div class="flex flex-row gap-5">
