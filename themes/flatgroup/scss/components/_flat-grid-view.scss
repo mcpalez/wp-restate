@@ -1,11 +1,11 @@
 .flat-item__element {
   .property-grid__view {
-    border: 1px solid $kui-disabled-500;
+    border: 1px solid $kui-disabled-400;
     background: $pure-white;
-    padding: 24px;
+    padding: 18px;
 
     &:hover {
-      border-color: $black-color-300;
+      border-color: $kui-theme;
     }
 
     .property-grid__container {
@@ -16,7 +16,7 @@
       .property-grid__header {
         .property-grid__status {
           span {
-            font-weight: 700;
+            font-weight: 500;
           }
 
           &.status-wolne {

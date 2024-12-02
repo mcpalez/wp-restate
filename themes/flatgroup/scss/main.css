@@ -75,21 +75,33 @@ button {
 }
 
 #app-header {
-  height: 57px;
-  background: #212121;
+  background: white;
+}
+#app-header .container .app-header__content {
+  padding-block: 15px 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #app-header .container .app-header__content .app-header__logo svg {
-  width: 140px;
+  width: 117px;
   height: auto;
 }
 @media (min-width: 992px) {
   #app-header .container .app-header__content .app-header__logo svg {
-    width: 155px;
+    width: 117px;
     height: auto;
   }
 }
 #app-header .container .app-header__content .app-header__logo svg path {
-  fill: #212121;
+  fill: #01335d;
+}
+#app-header .container .app-header__content .app-header__main-navigation svg {
+  width: 33px;
+  height: 100%;
+}
+#app-header .container .app-header__content .app-header__main-navigation svg path {
+  stroke: #212121;
 }
 
 #app-footer {
@@ -163,14 +175,14 @@ button {
   gap: 7px;
 }
 #searchBarWrapper .container .flex .filters-trigger button {
-  background: white;
-  border: 1px solid #969696;
-  height: 48px;
+  background: #ff7100;
+  border: none;
+  height: 40px;
   width: 100%;
   padding: 0 10px;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
-  color: #212121;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,7 +193,7 @@ button {
   height: auto;
 }
 #searchBarWrapper .container .flex .filters-trigger button svg path {
-  stroke: #212121;
+  stroke: white;
   stroke-width: 2;
 }
 #searchBarWrapper .container .flex .filters-trigger button:nth-child(3) svg path {
@@ -190,8 +202,8 @@ button {
 #searchBarWrapper .container .flex .filters-trigger button #advancedFilters__count {
   margin-left: 3px;
   font-weight: 700;
-  color: white;
-  background: #212121;
+  color: #01335d;
+  background: white;
   height: 20px;
   width: 20px;
   font-size: 13px;
@@ -201,8 +213,7 @@ button {
   padding-bottom: 25px;
 }
 #listingWrapper .container #listing-view {
-  padding-top: 5px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -235,14 +246,14 @@ button {
   width: 22px;
 }
 #listingWrapper .container #listing-view .drawerSortView .sortDrawer__content svg path {
-  stroke: #5e5e5e;
+  stroke: #01335d;
   stroke-width: 1.7;
 }
 #listingWrapper .container #listing-view .drawerSortView .viewDrawer__content .viewDrawer__rows svg {
   width: 22px;
 }
 #listingWrapper .container #listing-view .drawerSortView .viewDrawer__content .viewDrawer__rows svg path {
-  stroke: #5e5e5e;
+  stroke: #01335d;
   stroke-width: 1.7;
 }
 #listingWrapper .container #results .container #results-container {
@@ -306,7 +317,7 @@ button {
   height: 100%;
   inset: 0;
   z-index: 20;
-  top: 0;
+  top: 100px;
 }
 @keyframes slide-up {
   0% {
@@ -385,7 +396,7 @@ button {
   overflow-y: auto;
   overflow-x: hidden;
   height: 100%;
-  padding-bottom: 35px;
+  padding-bottom: 175px;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container:last-child {
   border-bottom: none;
@@ -430,8 +441,8 @@ button {
   box-shadow: inset 0 0 0 1px #e9e9e9;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons button.selected {
-  color: #212121;
-  box-shadow: inset 0 0 0 2px #212121;
+  color: #01335d;
+  box-shadow: inset 0 0 0 2px #01335d;
   background: #FFF;
   transform: scale(1);
   animation: bounceBack 0.3s ease;
@@ -485,7 +496,7 @@ button {
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox .status-checkbox-box {
   width: 22px;
   height: 22px;
-  border: 2px solid #212121;
+  border: 2px solid #01335d;
   margin-right: 10px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   display: inline-block;
@@ -505,8 +516,8 @@ button {
   transition: opacity 0.3s ease;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox input[type=checkbox]:checked + .status-checkbox-box {
-  background-color: #212121;
-  border-color: #212121;
+  background-color: #01335d;
+  border-color: #01335d;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__buttons .status-checkbox input[type=checkbox]:checked + .status-checkbox-box::after {
   opacity: 1;
@@ -543,7 +554,7 @@ button {
   display: none;
   position: absolute;
   border: 1px solid #e9e9e9;
-  border-top: 2px solid #212121;
+  border-top: 2px solid #01335d;
   background-color: #f6f6f6;
   width: 100%;
   z-index: 1;
@@ -568,15 +579,15 @@ button {
   appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid #212121;
+  border: 2px solid #01335d;
   border-radius: 0;
   position: relative;
   margin-right: 10px;
   cursor: pointer;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:checked {
-  background-color: #212121;
-  border-color: #212121;
+  background-color: #01335d;
+  border-color: #01335d;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:checked::after {
   content: "";
@@ -592,7 +603,7 @@ button {
   transition: opacity 0.3s ease;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__dropdown .advancedFilters__dropdown-content .advancedFilters__dropdown-item input[type=checkbox]:hover {
-  border-color: #212121;
+  border-color: #01335d;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__double-dropdown {
   display: flex;
@@ -656,7 +667,7 @@ button {
   box-shadow: none;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-connects .noUi-connect {
-  background: #212121;
+  background: #01335d;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle {
   width: 24px;
@@ -665,7 +676,7 @@ button {
   border-radius: 50px;
   box-shadow: none;
   background: #FFF;
-  border: 2px solid #212121;
+  border: 2px solid #01335d;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle::before, #advancedFilters .advancedFilters__box #advancedFilters__content .container .advancedFilters__parameters #search-form__filter .advancedFilters__parameters__container .advancedFilters__parameters__noUi .slider-content-size #slider-range .noUi-base .noUi-origin .noUi-handle::after {
   display: none;
@@ -765,7 +776,7 @@ button {
   overflow-y: hidden;
   align-items: center;
   background: white;
-  bottom: 0;
+  bottom: 100px;
   height: 81px;
   width: 100%;
   border-top: 1px solid #e9e9e9;
@@ -777,7 +788,7 @@ button {
   justify-content: space-between;
 }
 #advancedFilters .advancedFilters__box #advancedFilters__content .advancedFilters__footer .advancedFilters__buttons__container .advancedFilters__search__button {
-  background: #212121;
+  background: #01335d;
   padding: 7px 12px;
   font-weight: 600;
   height: 48px;
@@ -948,12 +959,12 @@ button {
 }
 
 .flat-item__element .property-grid__view {
-  border: 1px solid #969696;
+  border: 1px solid #bfbfbf;
   background: #FFF;
-  padding: 24px;
+  padding: 18px;
 }
 .flat-item__element .property-grid__view:hover {
-  border-color: #A6A6A6;
+  border-color: #01335d;
 }
 .flat-item__element .property-grid__view .property-grid__container {
   display: flex;
@@ -961,11 +972,11 @@ button {
   gap: 10px;
 }
 .flat-item__element .property-grid__view .property-grid__container .property-grid__header .property-grid__status span {
-  font-weight: 700;
+  font-weight: 500;
 }
 .flat-item__element .property-grid__view .property-grid__container .property-grid__header .property-grid__status.status-wolne span {
   color: white;
-  background: #212121;
+  background: #01335d;
   border: none;
   padding: 4px 10px;
   font-size: 11px;

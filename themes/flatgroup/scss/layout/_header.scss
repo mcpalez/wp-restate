@@ -1,21 +1,36 @@
 #app-header {
-  height: 57px;
-  background: $kui-theme;
+  background: $kui-white;
 
   .container {
     .app-header__content {
+      padding-block: 15px 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
       .app-header__logo {
         svg {
-          width: 140px;
+          width: 117px;
           height: auto;
 
           @include for-tablet-portrait-up {
-            width: 155px;
+            width: 117px;
             height: auto;
           }
 
           path {
-            fill: #212121;
+            fill: $kui-theme;
+          }
+        }
+      }
+
+      .app-header__main-navigation {
+        svg {
+          width: 33px;
+          height: 100%;
+
+          path {
+            stroke: $kui-black;
           }
         }
       }

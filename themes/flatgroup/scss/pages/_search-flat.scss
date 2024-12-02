@@ -40,14 +40,15 @@
         gap: 7px;
 
         button {
-          background: $kui-white;
-          border: 1px solid $kui-disabled-500;
-          height: 48px;
+          // background: #ff006c;
+          background: #ff7100;
+          border: none;
+          height: 40px;
           width: 100%;
           padding: 0 10px;
-          font-weight: 400;
+          font-weight: 500;
           font-size: 16px;
-          color: $kui-black;
+          color: $kui-white;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -58,7 +59,7 @@
             height: auto;
 
             path {
-              stroke: $kui-black;
+              stroke: $kui-white;
               stroke-width: 2;
             }
           }
@@ -74,8 +75,8 @@
           #advancedFilters__count {
             margin-left: 3px;
             font-weight: 700;
-            color: $kui-white;
-            background: $kui-theme;
+            color: $kui-theme;
+            background: $kui-white;
             height: 20px;
             width: 20px;
             font-size: 13px;
@@ -91,8 +92,7 @@
 
   .container {
     #listing-view {
-      padding-top: 5px;
-      padding-bottom: 30px;
+      padding-bottom: 20px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -130,7 +130,7 @@
             width: 22px;
 
             path {
-              stroke: $kui-disabled-700;
+              stroke: $kui-theme;
               stroke-width: 1.7;
             }
           }
@@ -142,7 +142,7 @@
               width: 22px;
 
               path {
-                stroke: $kui-disabled-700;
+                stroke: $kui-theme;
                 stroke-width: 1.7;
               }
             }

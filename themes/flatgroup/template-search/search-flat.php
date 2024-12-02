@@ -12,9 +12,6 @@ Template Name: Znajdź mieszkanie
       <p>/</p>
       <p class="active">Znajdz mieszkanie</p>
     </div>
-    <div class="flex">
-      <h5>Wyniki wyszukiwania</h5>
-    </div>
   </div>
 </div>
 <div id="searchBarWrapper">
@@ -34,13 +31,13 @@ Template Name: Znajdź mieszkanie
             <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" stroke="#212121" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
           </svg>
           Widok
-        </button>
+        </button> -->
         <button id="sortDrawer__open">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11 16L8 19M8 19L5 16M8 19V5M13 8L16 5M16 5L19 8M16 5V19" stroke="#212121" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
           </svg>
           Sortowanie
-        </button> -->
+        </button>
       </div>
     </div>
   </div>
@@ -52,11 +49,6 @@ Template Name: Znajdź mieszkanie
         <h3>Znaleźliśmy: <span id="resultListing-number__count__view"></span> wyników</h3>
       </div>
       <div class="drawerSortView">
-        <div class="sortDrawer__content">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11 16L8 19M8 19L5 16M8 19V5M13 8L16 5M16 5L19 8M16 5V19" stroke="#212121" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
-          </svg>
-        </div>
         <div class="viewDrawer__content">
           <div class="viewDrawer__rows">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

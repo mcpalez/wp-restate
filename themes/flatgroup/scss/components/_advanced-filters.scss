@@ -33,7 +33,7 @@
       height: 100%;
       inset: 0;
       z-index: 20;
-      top: 0;
+      top: 100px;
 
       @keyframes slide-up {
         0% {
@@ -125,7 +125,7 @@
           overflow-y: auto;
           overflow-x: hidden;
           height: 100%;
-          padding-bottom: 35px;
+          padding-bottom: 175px;
 
           #search-form__filter {
             .advancedFilters__parameters__container {
@@ -594,7 +594,7 @@
         overflow-y: hidden;
         align-items: center;
         background: white;
-        bottom: 0;
+        bottom: 100px;
         height: 81px;
         width: 100%;
         border-top: 1px solid $kui-disabled-200;
