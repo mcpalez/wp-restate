@@ -3,18 +3,18 @@
 
   .container {
     .app-header__content {
-      padding-block: 15px 3px;
+      padding-block: 12px 5px;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
       .app-header__logo {
         svg {
-          width: 117px;
+          width: 130px;
           height: auto;
 
           @include for-tablet-portrait-up {
-            width: 117px;
+            width: 130px;
             height: auto;
           }
 
@@ -30,7 +30,7 @@
           height: 100%;
 
           path {
-            stroke: $kui-black;
+            stroke: $kui-theme;
           }
         }
       }

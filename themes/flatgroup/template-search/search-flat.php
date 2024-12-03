@@ -5,7 +5,7 @@ Template Name: Znajdź mieszkanie
 ?>
 
 <?php get_header();?>
-<div id="headingPageContent">
+<!-- <div id="headingPageContent">
   <div class="container mx-auto px-5">
     <div class="flex breadcrumbs">
       <p>Home</p>
@@ -13,7 +13,7 @@ Template Name: Znajdź mieszkanie
       <p class="active">Znajdz mieszkanie</p>
     </div>
   </div>
-</div>
+</div> -->
 <div id="searchBarWrapper">
   <div class="container mx-auto px-5">
     <div class="flex flex-row gap-5">
@@ -181,7 +181,7 @@ Template Name: Znajdź mieszkanie
                 <input type="hidden" id="investment" name="investment" value="<?php echo $default_investment; ?>">
               </div>
             </div>
-            <hr class="mt-5">
+            <!-- <hr class="mt-5">
             <div class="advancedFilters__parameters__container">
               <div class="advancedFilters__parameters__heading">Informacje dodatkowe</div>
               <div class="advancedFilters__parameters__buttons">
@@ -192,7 +192,7 @@ Template Name: Znajdź mieszkanie
                 <button type="button" class="features-button" data-value="taras">Garaż</button>
                 <input type="hidden" id="features" name="features" value="<?php echo $default_features; ?>">
               </div>
-            </div>
+            </div> -->
           </form>
         </div>
       </div>

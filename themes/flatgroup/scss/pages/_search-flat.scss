@@ -40,13 +40,12 @@
         gap: 7px;
 
         button {
-          // background: #ff006c;
-          background: #ff7100;
+          background: $kui-theme-secondary;
           border: none;
-          height: 40px;
+          height: 37px;
           width: 100%;
           padding: 0 10px;
-          font-weight: 500;
+          font-weight: 400;
           font-size: 16px;
           color: $kui-white;
           display: flex;
@@ -55,12 +54,12 @@
           gap: 7px;
 
           svg {
-            width: 21px;
+            width: 20px;
             height: auto;
 
             path {
               stroke: $kui-white;
-              stroke-width: 2;
+              stroke-width: 1.6;
             }
           }
 

@@ -78,18 +78,18 @@ button {
   background: white;
 }
 #app-header .container .app-header__content {
-  padding-block: 15px 3px;
+  padding-block: 12px 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 #app-header .container .app-header__content .app-header__logo svg {
-  width: 117px;
+  width: 130px;
   height: auto;
 }
 @media (min-width: 992px) {
   #app-header .container .app-header__content .app-header__logo svg {
-    width: 117px;
+    width: 130px;
     height: auto;
   }
 }
@@ -101,7 +101,7 @@ button {
   height: 100%;
 }
 #app-header .container .app-header__content .app-header__main-navigation svg path {
-  stroke: #212121;
+  stroke: #01335d;
 }
 
 #app-footer {
@@ -175,12 +175,12 @@ button {
   gap: 7px;
 }
 #searchBarWrapper .container .flex .filters-trigger button {
-  background: #ff7100;
+  background: #c08457;
   border: none;
-  height: 40px;
+  height: 37px;
   width: 100%;
   padding: 0 10px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   color: white;
   display: flex;
@@ -189,12 +189,12 @@ button {
   gap: 7px;
 }
 #searchBarWrapper .container .flex .filters-trigger button svg {
-  width: 21px;
+  width: 20px;
   height: auto;
 }
 #searchBarWrapper .container .flex .filters-trigger button svg path {
   stroke: white;
-  stroke-width: 2;
+  stroke-width: 1.6;
 }
 #searchBarWrapper .container .flex .filters-trigger button:nth-child(3) svg path {
   stroke-width: 1.7;
@@ -317,7 +317,7 @@ button {
   height: 100%;
   inset: 0;
   z-index: 20;
-  top: 100px;
+  top: 115px;
 }
 @keyframes slide-up {
   0% {
@@ -776,7 +776,7 @@ button {
   overflow-y: hidden;
   align-items: center;
   background: white;
-  bottom: 100px;
+  bottom: 115px;
   height: 81px;
   width: 100%;
   border-top: 1px solid #e9e9e9;
